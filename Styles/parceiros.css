@@ -80,49 +80,30 @@ header{
 
 
 .Section_1{
+    display: flex;
+    flex-direction: column;
     background-color: var(--Cor-Bege);
     padding-left: 5%;
+    padding-right: 5%;
     padding-bottom: 2%;
     padding-top: 50px;
     display: grid;
-    gap: 10%;
-    grid-template-columns: 60% 30%;
 }
 
 /*------------ Gif da Direita ------------*/
-.Anuncio{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
+.Redes_Alimenticias{
+    display: grid;
+    grid-template-columns: 60% 38%;
+    gap: 2%;
     align-items: center;
-}
-
-.Anuncio h2{
-    margin-top: 10px;
-    font-family: var(--Fonte-1);
-    font-style: normal;
-    font-weight: 700;
-    font-size: 34px;
-    letter-spacing: -0.045em;
-
-    padding: 20px 54px;
-    border-radius: 50px;
-    background-color: var(--Cor-Verde);
-
-    color: var(--Cor-Bege);
-    transition: 200ms;
-}
-
-.Anuncio h2:hover{
-    background-color: var(--Cor-Vermelha);
-    padding: 20px 59px;
-    transition: 200ms;
 }
 
 /*------------ Textos Esquerda ------------*/
 .Textos h1{
     font-family: var(--Fonte-2);
     font-style: normal;
+    font-weight: 900;
     font-size: 64px;
     line-height: 102px;
     letter-spacing: 0.34em;
@@ -130,22 +111,19 @@ header{
     color: var(--Cor-Cinza);
 }
 
-.Textos h3{ 
-    font-family: var(--Fonte-2);
+.Textos h2{
+    font-family: var(--Fonte-1);
     font-style: normal;
-    font-weight: 900;
-    font-size: 39px;
-    line-height: 47px;
-    display: flex;
-    align-items: center;
-    text-align: justify;
-    letter-spacing: -0.045em;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 102px;
 
-    color: var(--Cor-Cinza);
+
+    color: var(--Cor-Verde);
 }
 
-.Textos p{
-    font-family: 'Alegreya Sans SC';
+p{
+    font-family: var(--Fonte-1);
     font-style: normal;
     font-weight: 400;
     font-size: 30px;
@@ -155,20 +133,6 @@ header{
 
     color: var(--Cor-Cinza);
 
-}
-
-.Textos h4{ 
-    font-family: var(--Fonte-2);
-    font-style: normal;
-    font-weight: 900;
-    font-size: 39px;
-    line-height: 47px;
-    display: flex;
-    align-items: center;
-    text-align: justify;
-    letter-spacing: -0.045em;
-
-    color: var(--Cor-Cinza);
 }
 
 .custom-shape-divider-top-1685362347 {
@@ -195,32 +159,25 @@ header{
 
 
 /*-------------- section 2  ---------------- */
+
 .Section_2{
-    background-color: var(--Cor-Verde);
-    padding-left: 5%;
     display: flex;
     flex-direction: column;
+    background-color: var(--Cor-Verde);
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 2%;
+    padding-top: 50px;
+    display: grid;
+}
+.Section_2 h1{
+    color: var(--Cor-Bege);
 }
 
-.Section_2>.Anuncio>img{
-    width: 376px;
-    height: 490px;
+.Section_2 h2{
+    color: var(--Cor-Bege);
 }
 
-.Section_2	>.Anuncio{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px 1px;
-    gap: 60px;
-
-
-    overflow-x: scroll;
+.Section_2 p{
+    color: var(--Cor-Bege);
 }
-
-
-
-
-
-
-
