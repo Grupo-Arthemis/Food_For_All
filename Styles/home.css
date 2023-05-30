@@ -20,6 +20,8 @@
     --Fonte-2: 'Baloo 2';
 }
 
+/*----------------- Header ------------------ */
+
 header{
     background-color: var(--Cor-Bege);
 }
@@ -36,6 +38,10 @@ header{
 #Ativo{
     color: var(--Cor-Vermelha);
 }
+
+.Menu_Esquerda_Simbulo{
+    display: none;
+}   
 
 .Menu_Esquerda{
     display: flex;
@@ -62,7 +68,7 @@ header{
 }
 
 .Menu_Direita{
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .Menu_Direita a{
@@ -127,7 +133,6 @@ header{
     font-weight: 900;
     font-size: 64px;
     line-height: 102px;
-    /* identical to box height */
 
     display: flex;
     align-items: flex-end;
@@ -206,6 +211,7 @@ header{
     padding-left: 5%;
     display: flex;
     flex-direction: column;
+    padding-bottom: 3%;
 }
 
 .Section_2>.Anuncio>img{
@@ -222,6 +228,162 @@ header{
 
 
     overflow-x: scroll;
+}
+
+/*-------------- Footer  ---------------- */
+footer{
+    
+    background-color: var(--Cor-Cinza);
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0% 2%;
+}
+
+footer div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #b9b9b9;
+}
+
+
+/* Midias queries */
+
+@media screen  and (max-width: 500px){
+    
+    .Menu{
+        margin-left: 5%;
+        margin-right: 2%;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .Menu a{
+        font-size: 20px;
+    }
+
+    .Menu ul{
+        width: max-content;
+    }
+    
+    .Menu_Esquerda{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .Menu_Esquerda_Logo{
+        width: 45px;
+        height: 45px;
+    }
+    
+    .Menu_Esquerda ul{
+        width: 50px;
+    }
+    
+    .Menu_Esquerda a{
+        display: none;
+    }
+    
+    #Ativo{
+        color: var(--Cor-Vermelha);
+        display: block;
+    }
+
+    .Menu_Esquerda_Simbulo{
+        display: block;
+        width: 50%;
+    } 
+
+    /* Main */
+
+    .Section_1{
+        display: flex;
+        flex-direction: column;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 2%;
+        gap: 5%;
+
+    }
+
+    .Section_1 h1{
+        font-size: 30px;
+        height: 50px;
+        align-items: center;
+
+    }
+
+    .Section_1 h3{
+        font-size: 20px;
+        height: 20px;
+        align-items: center;
+    }
+
+    .Section_1 p{
+        font-size: 15px;
+    }
+
+    .Section_1 h4{
+        font-size: 10px;
+        height: 20px;
+        align-items: center;
+    }
+
+    .Anuncio{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10%;
+    }
+
+    .Anuncio img{
+        width: 50%;
+    }
+    
+    .Anuncio h2{
+        font-size: 15px;
+        padding: 10px 100px;
+    }
+    
+    .Anuncio h2:hover{
+        padding: 12px 110px;
+    }
+
+    .Section_2 h1{
+        font-size: 20px;
+        height: 50px;
+        align-items: center;
+    }
+
+    .Section_2 .Anuncio img{
+        width: 30%;
+        height: 30%;
+    }
+
+    footer{
+        height: 30px;
+        padding: 0% 5%;
+    }
+
+    footer h3{
+        font-size: 10px;
+    }
+
+    footer img{
+        width: 20px;
+        height: 20px;
+
+    }
+
+
+
+    
 }
 
 
