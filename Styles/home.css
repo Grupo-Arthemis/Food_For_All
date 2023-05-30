@@ -304,7 +304,7 @@ footer div{
         width: 50%;
     } 
 
-    /* Main */
+    /* ---------Main----------- */
 
     .Section_1{
         display: flex;
@@ -357,7 +357,7 @@ footer div{
     }
     
     .Anuncio h2:hover{
-        padding: 12px 110px;
+        padding: 12px 100px;
     }
 
     .Section_2 h1{
@@ -386,10 +386,6 @@ footer div{
         height: 20px;
 
     }
-
-
-
-    
 }
 
 
