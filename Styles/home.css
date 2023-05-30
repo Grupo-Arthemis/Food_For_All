@@ -68,7 +68,7 @@ header{
 }
 
 .Menu_Direita{
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .Menu_Direita a{
@@ -230,6 +230,11 @@ header{
     overflow-x: scroll;
 }
 
+.Section_2 h1{
+    justify-content: center;
+    align-items: center;
+}
+
 /*-------------- Footer  ---------------- */
 footer{
     
@@ -348,7 +353,7 @@ footer div{
     
     .Anuncio h2{
         font-size: 15px;
-        padding: 10px 100px;
+        padding: 10px 90px;
     }
     
     .Anuncio h2:hover{
@@ -356,8 +361,9 @@ footer div{
     }
 
     .Section_2 h1{
-        font-size: 20px;
+        font-size: 13px;
         height: 50px;
+        justify-content: center;
         align-items: center;
     }
 
