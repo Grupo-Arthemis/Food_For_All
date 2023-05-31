@@ -289,12 +289,16 @@ footer div{
     .Menu_Esquerda{
         display: flex;
         flex-direction: column;
-        gap: 10px;
     }
+
+    .Menu_Esquerda_Fechado{
+        width: 50px;
+    }
+
+
 
     .Menu_Esquerda_Aberto{
         width: max-content;
-        
     }
 
     .Menu_Esquerda_Aberto ul{
@@ -302,7 +306,7 @@ footer div{
         flex-direction: column;
         gap: 0;
         width: max-content;
-        padding-left: 53px;
+        padding-left: 56px;
     }
 
     .Menu_Esquerda_Logo{
@@ -311,7 +315,7 @@ footer div{
     }
     
     .Menu_Esquerda ul{
-        width: 50px;
+        width: auto;
     }
     
     .Menu_Esquerda_Fechado a {
@@ -325,7 +329,7 @@ footer div{
 
     .Menu_Esquerda_Simbulo{
         display: block;
-        width: 50%;
+        width: 100%;
     } 
 
     /* ---------Main----------- */
