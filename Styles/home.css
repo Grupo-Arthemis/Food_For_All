@@ -43,7 +43,7 @@ header{
     display: none;
 }   
 
-.Menu_Esquerda{
+.Menu_Esquerda_Fechado{
     display: flex;
     gap: 50px;
 }
@@ -65,6 +65,10 @@ header{
     letter-spacing: -0.045em;
 
     color: var(--Cor-Cinza);
+}
+
+.Menu_Esquerda_Aberto ul{
+    display: none;
 }
 
 .Menu_Direita{
@@ -261,10 +265,10 @@ footer div{
     .Menu{
         margin-left: 5%;
         margin-right: 2%;
-        height: 100px;
+        height: auto;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: initial;
     }
 
     .Menu a{
@@ -275,10 +279,30 @@ footer div{
         width: max-content;
     }
     
-    .Menu_Esquerda{
+    .Menu_Esquerda div{
         display: flex;
+        flex-direction: row;
         align-items: center;
         gap: 10px;
+    }
+
+    .Menu_Esquerda{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .Menu_Esquerda_Aberto{
+        width: max-content;
+        
+    }
+
+    .Menu_Esquerda_Aberto ul{
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        width: max-content;
+        padding-left: 53px;
     }
 
     .Menu_Esquerda_Logo{
@@ -290,7 +314,7 @@ footer div{
         width: 50px;
     }
     
-    .Menu_Esquerda a{
+    .Menu_Esquerda_Fechado a {
         display: none;
     }
     

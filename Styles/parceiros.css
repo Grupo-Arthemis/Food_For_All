@@ -19,6 +19,10 @@
     --Fonte-2: 'Baloo 2';
 }
 
+ul {
+    margin-bottom: 0;
+} 
+
 header{
     background-color: var(--Cor-Bege);
 }
