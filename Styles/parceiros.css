@@ -181,3 +181,22 @@ p{
 .Section_2 p{
     color: var(--Cor-Bege);
 }
+
+
+/*-------------- Footer  ---------------- */
+footer{
+    
+    background-color: var(--Cor-Cinza);
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0% 2%;
+}
+
+footer div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #b9b9b9;
+}

@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@700;900&family=Baloo+2:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+:root{
+    
+    --Cor-Bege: #F4EFE3;
+    --Cor-Cinza: #3C3C3B;
+    --Cor-Verde: #618985;
+    --Cor-Vermelha: #C3423F;
+    --Cor-Amarela: #FFCB77;
+
+
+    --Fonte-1: 'Alegreya Sans SC';
+    --Fonte-2: 'Baloo 2';
+}
+
+/*----------------- Header ------------------ */
+
+header{
+    background-color: var(--Cor-Bege);
+}
+
+.Menu{
+    margin-left: 5%;
+    height: 150px;
+    display: grid;
+    gap: 10%;
+    grid-template-columns: 60% 30%;
+    align-items: center;
+}
+
+#Ativo{
+    color: var(--Cor-Vermelha);
+}
+
+.Menu_Esquerda_Simbulo{
+    display: none;
+}   
+
+.Menu_Esquerda{
+    display: flex;
+    gap: 50px;
+}
+
+.Menu ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.Menu_Esquerda a{
+    text-decoration: none;
+    font-family: var(--Fonte-1);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: -0.045em;
+
+    color: var(--Cor-Cinza);
+}
+
+.Menu_Direita{
+    justify-content: center;
+}
+
+.Menu_Direita a{
+    text-decoration: none;
+    font-family: var(--Fonte-1);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.045em;
+
+    color: var(--Cor-Verde);
+}
+
+/* -------Main------- */
+
+
+.Section_1{
+    background-color: var(--Cor-Bege);
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 3%;
+    padding-top: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.Atuação_Cards{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 30% 35% 30%;
+    gap: 2.5%;
+    align-items: center;
+    justify-content: center;    
+}
+
+
+.Atuação_Cards div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+}
+
+.Atuação_Cards i{
+    font-size: 50px;
+    align-self: center;
+}
+
+.Textos h1{
+    font-family: var(--Fonte-2);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 102px;
+
+
+    align-items: center;
+    letter-spacing: 0.34em;
+
+    color: #3C3C3B;
+}
+
+.Atuação_Cards h1{
+    letter-spacing: 0em;
+}
+
+.Atuação_Cards img{
+    width: 80%;
+}
+
+.Ganhador div{
+    display: flex;
+    flex-direction: row;
+}
+
+.Textos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+.Textos h2{
+    font-family: var(--Fonte-2);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+
+    color: #3C3C3B;
+}
+
+/*-------------- Section 2  ---------------- */
+
+.Section_2 {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: var(--Cor-Bege);
+    padding: 100px 0;
+}
+
+.Section_2 h1{
+    font-family: var(--Fonte-2);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 102px;
+
+
+    align-items: center;
+    letter-spacing: 0.34em;
+
+    color: #3C3C3B;
+}
+
+.Section_2 h2{
+    font-family: var(--Fonte-2);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+
+    color: #3C3C3B;
+}
+.Section_2 ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    width: 1200px;
+}
+
+.Section_2 li{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+
+
+
+.Section_2 li .Cards{
+    background-color: var(--Cor-Amarela);
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 15%;
+}
+
+.Cards div{
+    text-align: center;
+}
+
+.Section_2 li .Cards img{
+    width: 15%;
+    padding: 10px;
+
+}
+
+
+
+/*-------------- Footer  ---------------- */
+footer{
+    
+    background-color: var(--Cor-Cinza);
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0% 2%;
+}
+
+footer div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #b9b9b9;
+}
+
+
+/* Midias queries */
+
+@media screen  and (max-width: 500px){
+    
+    .Menu{
+        margin-left: 5%;
+        margin-right: 2%;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .Menu a{
+        font-size: 20px;
+    }
+
+    .Menu ul{
+        width: max-content;
+    }
+    
+    .Menu_Esquerda{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .Menu_Esquerda_Logo{
+        width: 45px;
+        height: 45px;
+    }
+    
+    .Menu_Esquerda ul{
+        width: 50px;
+    }
+    
+    .Menu_Esquerda a{
+        display: none;
+    }
+    
+    #Ativo{
+        color: var(--Cor-Vermelha);
+        display: block;
+    }
+
+    .Menu_Esquerda_Simbulo{
+        display: block;
+        width: 50%;
+    } 
+
+    /* ---------Main----------- */
+
+    .Section_1{
+        display: flex;
+        flex-direction: column;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 2%;
+        gap: 5%;
+
+    }
+
+    .Section_1 h2{
+        font-size: 30px;
+        height: 50px;
+        align-items: center;
+
+    }
+
+    .Section_1 h3{
+        font-size: 20px;
+        height: 20px;
+        align-items: center;
+    }
+
+    .Section_1 p{
+        font-size: 15px;
+    }
+
+    .Section_1 h4{
+        font-size: 10px;
+        height: 20px;
+        align-items: center;
+    }
+
+    .Anuncio{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10%;
+    }
+
+    .Section_1> img{
+        width: 50%;
+
+    }
+    
+    .Anuncio h2{
+        font-size: 15px;
+        padding: 10px 90px;
+    }
+    
+    .Anuncio h2:hover{
+        padding: 12px 92px;
+    }
+
+    .Section_2 h1{
+        font-size: 13px;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Section_2 .Anuncio img{
+        width: 30%;
+        height: 30%;
+    }
+
+    footer{
+        height: 30px;
+        padding: 0% 5%;
+    }
+
+    footer h3{
+        font-size: 10px;
+    }
+
+    footer img{
+        width: 20px;
+        height: 20px;
+
+    }
+}
