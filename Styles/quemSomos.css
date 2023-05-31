@@ -362,7 +362,7 @@ footer div{
 
     }
 
-    .Section_1 h1{
+    .Section_1 h2{
         font-size: 30px;
         height: 50px;
         align-items: center;
@@ -393,8 +393,9 @@ footer div{
         margin-top: 10%;
     }
 
-    .Anuncio img{
+    .Section_1> img{
         width: 50%;
+
     }
     
     .Anuncio h2{
@@ -433,10 +434,3 @@ footer div{
 
     }
 }
-
-
-
-
-
-
-
