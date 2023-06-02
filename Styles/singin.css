@@ -100,14 +100,31 @@ header{
     flex-direction: column;
     padding-bottom: 30px;
     padding-top: 30px;
+    align-items: center;
+    width: 100%;
 }
+
+#msgError{
+    width: 80%;
+    text-align: center;
+    color: #ff0000;
+    background-color: #ffbbbbd6;
+    padding: 10px;
+    border-radius: 20px;
+    display: none;
+    font-family: var(--Fonte-2);
+    font-style: normal;
+    font-weight: 700;
+    font-size:40px;
+  }
 
 input{
     font-family: var(--Fonte-2);
     font-style: normal;
     font-weight: 700;
-    font-size:40px;
+    font-size:30px;
     padding-left: 100px;
+    width: 80%;
 
 
     color: var(--Cor-Cinza);
