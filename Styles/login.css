@@ -78,16 +78,15 @@ header{
 
 /* -------Main------- */
 
-
 .Section_1{
     display: grid;
-    gap: 5%;
-    grid-template-columns: 55% 40%;
+    justify-content: space-between;
+    grid-template-columns: 50% 40%;
     background-color: var(--Cor-Bege);
     padding-left: 5%;
     padding-right: 5%;
-    padding-bottom: 2%;
-    padding-top: 50px;
+    padding-bottom: 6%;
+    padding-top: 5%;
 }
 
 /*------------ Gif da Direita ------------*/
@@ -99,6 +98,9 @@ header{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    gap: 30px;
 }
 
 input{
@@ -125,9 +127,9 @@ input{
 
 #Nome{
     background-color: #3C3C3B33;
-    height: 133px;
+    height: 100px;
     border-radius: 100px;
-    margin: 20px;
+    margin: 20px 40px;
     border: none;
     background-image: url("../Assets/do-utilizador\ 1.png");
     background-repeat: no-repeat;
@@ -136,33 +138,45 @@ input{
 
 #Email{
     background-color: #3C3C3B33;
-    height: 133px;
+    height: 100px;
     border-radius: 100px;
-    margin: 20px;
+    margin: 20px 40px;
     border: none;
     background-image: url("../Assets/Imagem\ -\ email.svg");
     background-repeat: no-repeat;
     background-position: 5% 50%;
 }
 
-#Telefone{
+
+#CNPJ{
     background-color: #3C3C3B33;
-    height: 133px;
-    border-radius: 100px;
-    margin: 20px;
+    height: 100px;
+    border-radius: 75px;
+    margin: 20px 40px;
     border: none;
-    background-image: url("../Assets/telefone\ 1.png");
+    background-image: url("../Assets/documentos-google\ 1.png");
     background-repeat: no-repeat;
     background-position: 5% 50%;
 }
 
-#Mensagem{
+#Senha{
     background-color: #3C3C3B33;
-    height: 200px;
-    border-radius: 75px;
-    margin: 20px;
+    height: 100px;
+    border-radius: 100px;
+    margin: 20px 40px;
     border: none;
-    background-image: url("../Assets/Imagem\ -\ mensagem.svg");
+    background-image: url("../Assets/cadeado\ 2.png");
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
+}
+
+#Senha_Confirm{
+    background-color: #3C3C3B33;
+    height: 100px;
+    border-radius: 100px;
+    margin: 20px 40px;
+    border: none;
+    background-image: url("../Assets/cadeado\ 2.png");
     background-repeat: no-repeat;
     background-position: 5% 50%;
 }
@@ -194,12 +208,15 @@ input{
     margin: 2px 2px;
 }
 
+/*------------ Textos Direita ------------*/
 
+.Textos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-
-
-
-/*------------ Textos Esquerda ------------*/
 .Textos h1{
     font-family: var(--Fonte-2);
     font-style: normal;
@@ -212,85 +229,21 @@ input{
 }
 
 .Textos img{
-    width: 80%;
+    width: 40%;
 }
 
-.Textos h2{
-    font-family: var(--Fonte-1);
-    font-style: normal;
-    font-weight: 700;
-    font-size: 64px;
-    line-height: 102px;
-
-
-    color: var(--Cor-Verde);
-}
 
 p{
     font-family: var(--Fonte-1);
     font-style: normal;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 40px;
     display: flex;
     align-items: center;
     text-align: justify;
 
     color: var(--Cor-Cinza);
 
-}
-
-/* Separação */
-
-.custom-shape-divider-top-1685362347 {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.custom-shape-divider-top-1685362347 svg {
-    position: relative;
-    display: block;
-    width: calc(157% + 1.3px);
-    height: 114px;
-    transform: rotateY(180deg);
-    background-color: var(--Cor-Verde);
-}
-
-.custom-shape-divider-top-1685362347 .shape-fill {
-    fill: #F4EFE3;
-}
-
-
-/*-------------- section 2  ---------------- */
-
-.Section_2{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    background-color: var(--Cor-Verde);
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 5%;
-    padding-top: 50px;
-}
-
-.Section_2 img{
-   margin-top: 100px;   
-   width: auto;
-}
-.Section_2 h1{
-    color: var(--Cor-Bege);
-}
-
-.Section_2 h2{
-    color: var(--Cor-Bege);
-}
-
-.Section_2 p{
-    color: var(--Cor-Bege);
 }
 
 
