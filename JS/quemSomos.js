@@ -1,6 +1,6 @@
 
 
-const Abrirlista = document.querySelector('.Menu_Esquerda_Simbulo');
+const Abrirlista = document.querySelector('.Menu_Esquerda_Aberto .Menu_Esquerda_Simbulo');
 
 Abrirlista.addEventListener('click', () => {
     console.log('Clicou');
