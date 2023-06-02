@@ -42,7 +42,7 @@ header{
     display: none;
 }   
 
-.Menu_Esquerda{
+.Menu_Esquerda_Fechado{
     display: flex;
     gap: 50px;
 }
@@ -64,6 +64,10 @@ header{
     letter-spacing: -0.045em;
 
     color: var(--Cor-Cinza);
+}
+
+.Menu_Esquerda_Aberto{
+    display: none;
 }
 
 .Menu_Direita{
@@ -245,13 +249,16 @@ header{
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    display: flex;
+    display: none;
     align-items: center;
     text-align: center;
 
     color: var(--Cor-Bege);
-    display: none;
     width: 280px;
+}
+
+.Card_Descricao{
+    display: none;
 }
 
 .Cards:hover{
@@ -305,50 +312,49 @@ footer div{
 @media screen  and (max-width: 500px){
     
     .Menu{
+        padding-top: 2%;
         margin-left: 5%;
         margin-right: 2%;
-        height: 90px;
+        height: auto;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: initial;
     }
 
     .Menu a{
         font-size: 20px;
     }
 
-    .Menu ul{
-        width: max-content;
+    .Menu_Esquerda_Simbulo{
+        width: 50px;
     }
-    
-    .Menu_Esquerda{
-        display: flex;
+    .Menu_Esquerda_Simbulo{
+        display: block;
+    }
+
+    .Menu_Esquerda_Fechado{
+        display: none;
+    }
+
+    .Menu_Esquerda_Aberto{
+        display: grid;
+        gap: 1%;
+        grid-template-columns: 65% 25% ;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Menu_Esquerda_Aberto ul{
+        display: none;
+        flex-direction: column;
         align-items: center;
         gap: 10px;
     }
 
-    .Menu_Esquerda_Logo{
-        width: 45px;
-        height: 45px;
+    .Menu_Esquerda_Aberto img{
+        width: 70%;
     }
-    
-    .Menu_Esquerda ul{
-        width: 50px;
-    }
-    
-    .Menu_Esquerda a{
-        display: none;
-    }
-    
-    #Ativo{
-        color: var(--Cor-Vermelha);
-        display: block;
-    }
-
-    .Menu_Esquerda_Simbulo{
-        display: block;
-        width: 50%;
-    } 
 
     /* ---------Main----------- */
 
@@ -362,8 +368,15 @@ footer div{
 
     }
 
-    .Section_1 h2{
+    .Section_1 h1{
         font-size: 30px;
+        height: 50px;
+        align-items: center;
+
+    }
+
+    .Section_1 h2{
+        font-size: 15px;
         height: 50px;
         align-items: center;
 
@@ -377,12 +390,18 @@ footer div{
 
     .Section_1 p{
         font-size: 15px;
+        text-align: justify;
     }
 
     .Section_1 h4{
         font-size: 10px;
         height: 20px;
         align-items: center;
+    }
+
+    .Atuação_Cards{
+        display: flex;
+        flex-direction: column;
     }
 
     .Anuncio{
@@ -393,25 +412,42 @@ footer div{
         margin-top: 10%;
     }
 
-    .Section_1> img{
+    .Anuncio img{
         width: 50%;
+    }
+    /* ---------Section 2--------- */
 
-    }
-    
-    .Anuncio h2{
-        font-size: 15px;
-        padding: 10px 90px;
-    }
-    
-    .Anuncio h2:hover{
-        padding: 12px 92px;
+    .Section_2{
+        display: flex;
+        flex-direction: column;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 2%;
+        gap: 5%;
+        align-items: center;
+
     }
 
     .Section_2 h1{
-        font-size: 13px;
-        height: 50px;
+        font-size: 20px;
         justify-content: center;
         align-items: center;
+    }
+
+    .Section_2 h3{
+        font-size: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Section_2 .Cards_Container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        width: 50%;
+        margin: 5%;
     }
 
     .Section_2 .Anuncio img{
