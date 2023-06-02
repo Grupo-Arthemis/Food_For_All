@@ -322,8 +322,6 @@ footer div{
        
     }
 
-
-    
     .Atuação_Cards i{
         font-size: 20px;
         align-self: center;
@@ -369,7 +367,7 @@ footer div{
         font-family: var(--Fonte-2);
         font-style: normal;
         font-weight: 900;
-        font-size: 15px;
+        font-size: 13px;
     
         color: #3C3C3B;
     }
@@ -403,7 +401,7 @@ footer div{
     font-family: var(--Fonte-2);
     font-style: normal;
     font-weight: 900;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 20px;
 
     color: #3C3C3B;
@@ -445,9 +443,6 @@ footer div{
 .Section_2 i img{
     width: 40%;
 }
-
-
-
 
     /* -----------footer----------- */
     footer{
