@@ -157,10 +157,17 @@ document.getElementById("Botao").addEventListener("click", function(event) {
     if (validarFormulario()) {
         var confirmacao = confirm("Está certo das suas informações?");
         if (confirmacao) {
+            var tipoPessoa = "";
+            if (CNPJ.value.length === 14) {
+                tipoPessoa = "Pessoa Jurídica";
+            } else if (CNPJ.value.length === 11) {
+                tipoPessoa = "Pessoa Física";
+            }
             document.getElementsByClassName("formulario_itens");
             console.log("Nome: " + nome.value);
             console.log("Email: " + email.value);
             console.log("Senha: " + senha.value);
+            console.log("Tipo de Pessoa: " + tipoPessoa);
             console.log("-----------------------");
 
             var listaUser = JSON.parse(localStorage.getItem("listaUser"));
