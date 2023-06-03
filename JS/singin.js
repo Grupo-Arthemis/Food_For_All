@@ -51,6 +51,9 @@ function validarFormulario() {
     } else if (nome.value.length < 2 || email.value.lenght < 5) {
         alert("Os campos nome, CPF / CNPJ e email não atingiram o número mínimo de caracteres.");
         return false;
+    } else if (CNPJ.value.length !== 14 && CNPJ.value.length !== 11) {
+        alert("Voce digitou seu CNPJ/CPF incorretamente, tente novamente.")
+        return false;
     } else if (senha.value.length < 6 || senha.value.length > 8) {
         alert("A senha deve ter no minimo 6 digitos e no maximo 8 digitos.")   
         return false;
@@ -102,7 +105,7 @@ CNPJ.addEventListener("focus", ()=>{
 });
 
 CNPJ.addEventListener("keyup", ()=>{
-    if((CNPJ.value.length < 11)||(CNPJ.value.length > 14)) {
+    if((CNPJ.value.length !== 11)&&(CNPJ.value.length !== 14)) {
         CNPJ.setAttribute("style","outline-color:#ff0000;")
 
     }else{
