@@ -213,6 +213,13 @@ footer div{
     color: #b9b9b9;
 }
 
+.horario {
+    background-color: #3C3C3B;
+    color: white;
+    padding: 10px;
+    font-size: 24px;
+}
+
 @media screen  and (max-width: 500px){
     
     .Menu{
