@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="../Styles/contatos.css">
     <script src="../JS/contato.js" defer></script>
     <script src="../JS/tempo.js" defer></script>
+
+    <!-- API DO MAPA -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
     <title>Contatos</title>
 </head>
 <body>
@@ -57,7 +62,8 @@
         <section class="Section_2">
             <div class="Textos">
                 <h2>LOCALIZE ONGs PRÓXIMAS E FAÇA A DIFERENÇA VOCÊ TAMBÉM : </h2>
-                <img src="../Assets/Mapa - Imagem.png" alt="">
+                <div id="mapa" style="height: 400px;"></div>
+                <!-- <img src="../Assets/Mapa - Imagem.png" alt=""> -->
             </div>
         </section>
     </main>

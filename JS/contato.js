@@ -60,3 +60,65 @@ function mascaraTelefone() {
 
     telefoneInput.value = telefone;
 }
+
+
+
+// TRANSFORMAR ENDERECO EM CORDENADAS
+
+// Defina o endereço que você deseja geocodificar
+var endereco = "ISSO AQUI AINDA NAO TA FUNCIONANDO, FICA DANDO AS CORDENADAS DA ALEMANHA";
+
+// Defina sua chave de API do OpenCage Geocoder
+var apiKey = "https://api.opencagedata.com/geocode/v1/json?q=URI-ENCODED-PLACENAME&key=bb94a48df98f4f949466eb9b4e1a4907";
+
+// Codifique o endereço para ser usado em uma URL
+var enderecoCodificado = encodeURIComponent(endereco);
+
+// Crie a URL da requisição para a API do OpenCage Geocoder
+var url = "https://api.opencagedata.com/geocode/v1/json?key=bb94a48df98f4f949466eb9b4e1a4907&q=Frauenplan+1%2C+99423+Weimar%2C+Germany&pretty=1" + enderecoCodificado + "&key=" + apiKey;
+
+// Faça a requisição HTTP para a API do OpenCage Geocoder
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    // Obtenha as coordenadas geográficas do resultado da resposta
+    var latitude = data.results[0].geometry.lat;
+    var longitude = data.results[0].geometry.lng;
+
+    // Faça o que desejar com as coordenadas (latitude e longitude)
+    console.log("Latitude: " + latitude);
+    console.log("Longitude: " + longitude);
+  })
+  .catch(error => {
+    console.error("Erro ao geocodificar o endereço:", error);
+  });
+
+
+
+
+// MAPA INTERATIVO
+
+// explicacao dos numeros: 2 primeiros sao as cordenadas e o ultimo nivel do zoom, coloquei 16 pra ficar perto
+var mapa = L.map('mapa').setView([-23.5614, -46.6552], 16);
+
+// Adicione um provedor de mapeamento (como OpenStreetMap) como camada base
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+  maxZoom: 18,
+}).addTo(mapa);
+
+// Adicione um marcador ao mapa
+var marcador = L.marker([51.5, -0.09]).addTo(mapa);
+
+// Adicione um polígono ao mapa
+var poligono = L.polygon([
+  [51.509, -0.08],
+  [51.503, -0.06],
+  [51.51, -0.047],
+]).addTo(mapa);
+
+// Adicione uma linha ao mapa
+var linha = L.polyline([
+  [51.51, -0.12],
+  [51.53, -0.08],
+]).addTo(mapa);
