@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Styles/contatos.css">
+    <script src="../JS/contato.js" defer></script>
     <script src="../JS/tempo.js" defer></script>
     <title>Contatos</title>
 </head>
@@ -39,7 +40,7 @@
             <div class="Formulario">
                 <input type="text" placeholder="Nome" id="Nome">
                 <input type="email" placeholder="Email" id="Email">
-                <input type="number" placeholder="Telefone" id="Telefone">
+                <input type="text" placeholder="Telefone" id="Telefone" oninput="mascaraTelefone()">
                 <input type="text" placeholder="Mensagem" id="Mensagem">
                 <button type="submit" id="Botao">
                     <h2>Enviar</h2>
