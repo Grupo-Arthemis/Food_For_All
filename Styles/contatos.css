@@ -293,6 +293,12 @@ p{
     color: var(--Cor-Bege);
 }
 
+#mapa{
+    border-radius: 20px;
+
+    
+}
+
 
 /*-------------- Footer  ---------------- */
 footer{

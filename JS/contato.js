@@ -63,38 +63,69 @@ function mascaraTelefone() {
 
 
 
-// TRANSFORMAR ENDERECO EM CORDENADAS
+// // TRANSFORMAR ENDERECO EM CORDENADAS
 
-// Defina o endereço que você deseja geocodificar
-var endereco = "ISSO AQUI AINDA NAO TA FUNCIONANDO, FICA DANDO AS CORDENADAS DA ALEMANHA";
+// // Defina o endereço que você deseja geocodificar
+// var endereco = "ISSO AQUI AINDA NAO TA FUNCIONANDO, FICA DANDO AS CORDENADAS DA ALEMANHA";
 
-// Defina sua chave de API do OpenCage Geocoder
-var apiKey = "https://api.opencagedata.com/geocode/v1/json?q=URI-ENCODED-PLACENAME&key=bb94a48df98f4f949466eb9b4e1a4907";
+// // Defina sua chave de API do OpenCage Geocoder
+// var apiKey = "https://api.opencagedata.com/geocode/v1/json?q=URI-ENCODED-PLACENAME&key=bb94a48df98f4f949466eb9b4e1a4907";
 
-// Codifique o endereço para ser usado em uma URL
-var enderecoCodificado = encodeURIComponent(endereco);
+// // Codifique o endereço para ser usado em uma URL
+// var enderecoCodificado = encodeURIComponent(endereco);
 
-// Crie a URL da requisição para a API do OpenCage Geocoder
-var url = "https://api.opencagedata.com/geocode/v1/json?key=bb94a48df98f4f949466eb9b4e1a4907&q=Frauenplan+1%2C+99423+Weimar%2C+Germany&pretty=1" + enderecoCodificado + "&key=" + apiKey;
+// // Crie a URL da requisição para a API do OpenCage Geocoder
+// var url = "https://api.opencagedata.com/geocode/v1/json?key=bb94a48df98f4f949466eb9b4e1a4907&q=Frauenplan+1%2C+99423+Weimar%2C+Germany&pretty=1" + enderecoCodificado + "&key=" + apiKey;
 
-// Faça a requisição HTTP para a API do OpenCage Geocoder
+// // Faça a requisição HTTP para a API do OpenCage Geocoder
+// fetch(url)
+//   .then(response => response.json())
+//   .then(data => {
+//     // Obtenha as coordenadas geográficas do resultado da resposta
+//     var latitude = data.results[0].geometry.lat;
+//     var longitude = data.results[0].geometry.lng;
+
+//     // Faça o que desejar com as coordenadas (latitude e longitude)
+//     console.log("Latitude: " + latitude);
+//     console.log("Longitude: " + longitude);
+//   })
+//   .catch(error => {
+//     console.error("Erro ao geocodificar o endereço:", error);
+//   });
+
+// ------------------------Tentativa do azul de fazer o mapa funcionar
+
+const apiKey = '70578fd8fde040d1a4ed1b6a52d743a7';
+const cep = '06010170';
+
+// Fazendo uma requisição HTTP para a API
+const url = `https://api.opencagedata.com/geocode/v1/json?q=${cep}&key=${apiKey}`;
+
 fetch(url)
   .then(response => response.json())
   .then(data => {
-    // Obtenha as coordenadas geográficas do resultado da resposta
-    var latitude = data.results[0].geometry.lat;
-    var longitude = data.results[0].geometry.lng;
-
-    // Faça o que desejar com as coordenadas (latitude e longitude)
-    console.log("Latitude: " + latitude);
-    console.log("Longitude: " + longitude);
+    // Verifique se a resposta foi bem-sucedida
+    if (data.status.code === 200) {
+      const results = data.results;
+      if (results.length > 0) {
+        // Obtendo as coordenadas geográficas
+        const latitude = results[0].geometry.lat;
+        const longitude = results[0].geometry.lng;
+        
+        console.log(`Latitude: ${latitude}`);
+        console.log(`Longitude: ${longitude}`);
+      } else {
+        console.log('Nenhum resultado encontrado para o CEP fornecido.');
+      }
+    } else {
+      console.log('Erro na requisição:', data.status.message);
+    }
   })
   .catch(error => {
-    console.error("Erro ao geocodificar o endereço:", error);
+    console.log('Erro na requisição:', error);
   });
 
-
-
+// ------------------------Tentativa do azul de fazer o mapa funcionar - fim
 
 // MAPA INTERATIVO
 
@@ -108,7 +139,8 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(mapa);
 
 // Adicione um marcador ao mapa
-var marcador = L.marker([51.5, -0.09]).addTo(mapa);
+var marcador = L.marker([-23.5614, -46.6552]).addTo(mapa);
+var marcador2 = L.marker([-23.53466330, -46.76771490]).addTo(mapa);
 
 // Adicione um polígono ao mapa
 var poligono = L.polygon([
