@@ -96,61 +96,82 @@ function mascaraTelefone() {
 // ------------------------Tentativa do azul de fazer o mapa funcionar
 
 const apiKey = '70578fd8fde040d1a4ed1b6a52d743a7';
-const cep = '06010170';
+cep = "01311000"
+var cepe = document.getElementById("cep");
+if (cepe.value = ""){
+  cep = "01311200"
 
-// Fazendo uma requisição HTTP para a API
+}else{
+  console.log(cepe.value)
+}
+
+console.log(cep.value);
+
 const url = `https://api.opencagedata.com/geocode/v1/json?q=${cep}&key=${apiKey}`;
+// Fazendo uma requisição HTTP para a API
 
-fetch(url)
-  .then(response => response.json())
-  .then(data => {
-    // Verifique se a resposta foi bem-sucedida
-    if (data.status.code === 200) {
-      const results = data.results;
-      if (results.length > 0) {
-        // Obtendo as coordenadas geográficas
-        const latitude = results[0].geometry.lat;
-        const longitude = results[0].geometry.lng;
-        
-        console.log(`Latitude: ${latitude}`);
-        console.log(`Longitude: ${longitude}`);
+
+let long;
+let lati;
+
+function CEP() {
+  return fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      // Verifique se a resposta foi bem-sucedida
+      if (data.status.code === 200) {
+        const results = data.results;
+        if (results.length > 0) {
+          // Obtendo as coordenadas geográficas
+          let latitude = results[0].geometry.lat;
+          let longitude = results[0].geometry.lng;
+
+          lati = latitude;
+          long = longitude;
+
+        } else {
+          console.log('Nenhum resultado encontrado para o CEP fornecido.');
+        }
       } else {
-        console.log('Nenhum resultado encontrado para o CEP fornecido.');
+        console.log('Erro na requisição:', data.status.message);
       }
-    } else {
-      console.log('Erro na requisição:', data.status.message);
-    }
-  })
-  .catch(error => {
-    console.log('Erro na requisição:', error);
-  });
+    })
+    .catch(error => {
+      console.log('Erro na requisição:', error);
+    });
+};
+
+CEP().then(() => {
+  console.log(lati);
+  console.log(long);
+  var mapa = L.map('mapa').setView([lati, long], 16);
+  
+  // MAPA INTERATIVO
+  
+  // explicacao dos numeros: 2 primeiros sao as cordenadas e o ultimo nivel do zoom, coloquei 16 pra ficar perto
+  
+  // Adicione um provedor de mapeamento (como OpenStreetMap) como camada base
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+    maxZoom: 20,
+  }).addTo(mapa);
+  
+  // Adicione um marcador ao mapa
+  var marcador = L.marker([-23.5614, -46.6552]).addTo(mapa);
+  var marcador2 = L.marker([-23.5349055, -46.767825]).addTo(mapa);
+  
+  // Adicione um polígono ao mapa
+  var poligono = L.polygon([
+    [51.509, -0.08],
+    [51.503, -0.06],
+    [51.51, -0.047],
+  ]).addTo(mapa);
+  
+  // Adicione uma linha ao mapa
+  var linha = L.polyline([
+    [51.51, -0.12],
+    [51.53, -0.08],
+  ]).addTo(mapa);
+});
 
 // ------------------------Tentativa do azul de fazer o mapa funcionar - fim
-
-// MAPA INTERATIVO
-
-// explicacao dos numeros: 2 primeiros sao as cordenadas e o ultimo nivel do zoom, coloquei 16 pra ficar perto
-var mapa = L.map('mapa').setView([-23.5614, -46.6552], 16);
-
-// Adicione um provedor de mapeamento (como OpenStreetMap) como camada base
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-  maxZoom: 18,
-}).addTo(mapa);
-
-// Adicione um marcador ao mapa
-var marcador = L.marker([-23.5614, -46.6552]).addTo(mapa);
-var marcador2 = L.marker([-23.53466330, -46.76771490]).addTo(mapa);
-
-// Adicione um polígono ao mapa
-var poligono = L.polygon([
-  [51.509, -0.08],
-  [51.503, -0.06],
-  [51.51, -0.047],
-]).addTo(mapa);
-
-// Adicione uma linha ao mapa
-var linha = L.polyline([
-  [51.51, -0.12],
-  [51.53, -0.08],
-]).addTo(mapa);

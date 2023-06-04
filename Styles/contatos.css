@@ -167,6 +167,17 @@ input{
     background-position: 5% 50%;
 }
 
+#cep{
+    background-color: var(--Cor-Bege);
+    height: 100px;
+    border-radius: 100px;
+    margin: 20px;
+    border: none;
+    background-image: url("../Assets/telefone\ 1.png");
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
+}
+
 #Botao{
     background-color: var(--Cor-Verde);
     align-self: center;
