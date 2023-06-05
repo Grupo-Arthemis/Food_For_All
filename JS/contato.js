@@ -92,109 +92,19 @@ function mascaraTelefone() {
 //   });
 
 //---------------------------Tentativa do luan fazer o mapa funcionar
-var apiKey = "70578fd8fde040d1a4ed1b6a52d743a7";
+// var apiKey = "70578fd8fde040d1a4ed1b6a52d743a7";
 
-var cepe = document.getElementById("cep");
-var cep = "01311200";
-
-cepe.addEventListener("input", function() {
-  if (cepe.value.length === 8) {
-    cep = cepe.value;
-    atualizarMapa();
-  }
-});
-const url = `https://api.opencagedata.com/geocode/v1/json?q=${cep}&key=${apiKey}`;
-
-let long;
-let lati;
-
-function CEP() {
-  return fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      // Verifique se a resposta foi bem-sucedida
-      if (data.status.code === 200) {
-        const results = data.results;
-        if (results.length > 0) {
-          // Obtendo as coordenadas geográficas
-          let latitude = results[0].geometry.lat;
-          let longitude = results[0].geometry.lng;
-
-          lati = latitude;
-          long = longitude;
-
-        } else {
-          console.log('Nenhum resultado encontrado para o CEP fornecido.');
-        }
-      } else {
-        console.log('Erro na requisição:', data.status.message);
-      }
-    })
-    .catch(error => {
-      console.log('Erro na requisição:', error);
-    });
-};
-
-function atualizarMapa() {
-  CEP().then(() => {
-    console.log(lati);
-    console.log(long);
-    var mapa = L.map('mapa').setView([lati, long], 16);
-
-    // MAPA INTERATIVO
-  
-  // explicacao dos numeros: 2 primeiros sao as cordenadas e o ultimo nivel do zoom, coloquei 16 pra ficar perto
-  
-  // Adicione um provedor de mapeamento (como OpenStreetMap) como camada base
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-    maxZoom: 20,
-  }).addTo(mapa);
-  
-  // Adicione um marcador ao mapa
-  var marcador = L.marker([-23.5614, -46.6552]).addTo(mapa);
-  var marcador2 = L.marker([-23.5349055, -46.767825]).addTo(mapa);
-  
-  // Adicione um polígono ao mapa
-  var poligono = L.polygon([
-    [51.509, -0.08],
-    [51.503, -0.06],
-    [51.51, -0.047],
-  ]).addTo(mapa);
-  
-  // Adicione uma linha ao mapa
-  var linha = L.polyline([
-    [51.51, -0.12],
-    [51.53, -0.08],
-  ]).addTo(mapa);
-
-  });
-}
-
-atualizarMapa();
-
-
-//---------------------------Tentativa do luan fazer o mapa funcionar
-
-
-
-// ------------------------Tentativa do azul de fazer o mapa funcionar
-
-// const apiKey = '70578fd8fde040d1a4ed1b6a52d743a7';
-// cep = "01311000"
 // var cepe = document.getElementById("cep");
-// if (cepe.value = ""){
-//   cep = "01311200"
+// var cep = "01311200";
 
-// }else{
-//   console.log(cepe.value)
-// }
-
-// console.log(cep.value);
+// cepe.addEventListener("input", function() {
+//   if (cepe.value.length === 8) {
+//     cep = cepe.value;
+//     atualizarMapa();
+//   }
+// });
 
 // const url = `https://api.opencagedata.com/geocode/v1/json?q=${cep}&key=${apiKey}`;
-// // Fazendo uma requisição HTTP para a API
-
 
 // let long;
 // let lati;
@@ -226,12 +136,13 @@ atualizarMapa();
 //     });
 // };
 
-// CEP().then(() => {
-//   console.log(lati);
-//   console.log(long);
-//   var mapa = L.map('mapa').setView([lati, long], 16);
-  
-//   // MAPA INTERATIVO
+// function atualizarMapa() {
+//   CEP().then(() => {
+//     console.log(lati);
+//     console.log(long);
+//     var mapa = L.map('mapa').setView([lati, long], 16);
+
+//     // MAPA INTERATIVO
   
 //   // explicacao dos numeros: 2 primeiros sao as cordenadas e o ultimo nivel do zoom, coloquei 16 pra ficar perto
   
@@ -257,6 +168,82 @@ atualizarMapa();
 //     [51.51, -0.12],
 //     [51.53, -0.08],
 //   ]).addTo(mapa);
-// });
+
+//   });
+// }
+
+// atualizarMapa();
+
+
+//---------------------------Tentativa do luan fazer o mapa funcionar
+
+
+
+// ------------------------Tentativa do azul de fazer o mapa funcionar
+
+const apiKey = '70578fd8fde040d1a4ed1b6a52d743a7';
+let mapa; // Variável global para o mapa
+
+const enviarCep = document.getElementById("Botao2");
+const cepe = document.getElementById("cep");
+
+enviarCep.addEventListener("click", function() {
+    const cep = cepe.value;
+    if (cep.length > 1) {
+        console.log(cep);
+        CEP(cep).then((result) => {
+            console.log(result);
+            const { latitude, longitude } = result;
+            if (mapa) {
+                changeMapView(latitude, longitude);
+            } else {
+                initMap(latitude, longitude);
+            }
+        });
+    } else {
+        console.log('CEP inválido');
+    }
+});
+
+function CEP(cep) {
+    const url = `https://api.opencagedata.com/geocode/v1/json?q=${cep}&key=${apiKey}`;
+    return fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            if (data.status.code === 200) {
+                const results = data.results;
+                if (results.length > 0) {
+                    const { lat, lng } = results[0].geometry;
+                    return { latitude: lat, longitude: lng };
+                } else {
+                    console.log('Nenhum resultado encontrado para o CEP fornecido.');
+                }
+            } else {
+                console.log('Erro na requisição:', data.status.message);
+            }
+        })
+        .catch(error => {
+            console.log('Erro na requisição:', error);
+        });
+};
+
+function initMap(latitude, longitude) {
+    mapa = L.map('mapa').setView([latitude, longitude], 16);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+        maxZoom: 20,
+    }).addTo(mapa);
+
+    var marcador = L.marker([latitude, longitude]).addTo(mapa);
+}
+
+function changeMapView(latitude, longitude) {
+    if (mapa) {
+        mapa.setView([latitude, longitude]);
+    }
+}
+
+
 
 // ------------------------Tentativa do azul de fazer o mapa funcionar - fim

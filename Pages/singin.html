@@ -4,27 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../JS/singin.js" defer></script>
     <link rel="stylesheet" href="../Styles/singin.css">
+    <script src="../JS/home.js" defer></script>
+    <script src="../JS/singin.js" defer></script>
     <title>Sing-In</title>
 </head>
 <body>
     <header>
         <div class="Menu">
             <div class="Menu_Esquerda">
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="./parceiros.html">Parceiros</a></li>
-                    <li><a href="./quemSomos.html">Quem Somos</a></li>
-                    <li><a href="./ranking.html">Ranking</a></li>
-                    <li><a href="./contatos.html">Contatos</a></li>
-                    <li><a href="./saibaMais.html">Saiba mais</a></li>
-                </ul>
+                <div class="Menu_Esquerda_Fechado">
+                    <img src="../Assets/Logo.png" alt="" class="Menu_Esquerda_Logo">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="./parceiros.html">Parceiros</a></li>
+                        <li><a href="./quemSomos.html">Quem Somos</a></li>
+                        <li><a href="./ranking.html">Ranking</a></li>
+                        <li><a href="./contatos.html">Contatos</a></li>
+                        <li><a href="./saibaMais.html">Saiba mais</a></li>
+                    </ul>
+                    <img src="../Assets/Simbulo.svg" alt="" class="Menu_Esquerda_Simbulo">
+                </div>
+                <div class="Menu_Esquerda_Aberto">
+                        <img src="../Assets/Logo.png" alt="" class="Menu_Esquerda_Logo">
+                        <img src="../Assets/Simbulo.svg" alt="" class="Menu_Esquerda_Simbulo">
+                        <ul>
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="./parceiros.html">Parceiros</a></li>
+                            <li><a href="./quemSomos.html">Quem Somos</a></li>
+                            <li><a href="./ranking.html">Ranking</a></li>
+                            <li><a href="./contatos.html">Contatos</a></li>
+                            <li><a href="./saibaMais.html">Saiba mais</a></li>
+                        </ul>
+                </div>
             </div>
             <div>
                 <ul class="Menu_Direita">
-                    <li><a href="./login.html">Login</a></li>
-                    <li><a href="#"  id="Ativo">Sing-in</a></li>
+                    <li><a href="../Pages/login.html">Login</a></li>
+                    <li><a href="../Pages/singin.html" id="Ativo">Sing-in</a></li>
+                    <label class="switch">
+                        <input type="checkbox" id="darkModeButton">
+                        <span class="slider"></span>
+                    </label> 
                 </ul>
             </div>
         </div>

@@ -380,6 +380,10 @@ footer div{
     .Menu_Esquerda_Aberto a{
         font-size: 17px;
     }
+
+    .Menu_Direita a{
+        font-size: 17px;
+    }
     /* ---------Main----------- */
 
     .Section_1{
