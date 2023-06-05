@@ -251,7 +251,7 @@ input{
     background-position: 5% 50%;
 }
 
-#Botao{
+#Botao, #Botao2{
     background-color: var(--Cor-Verde);
     align-self: center;
     padding: 22px 115px;
@@ -268,11 +268,11 @@ input{
     cursor: pointer;
 }
 
-#Botao:hover{
+#Botao:hover, #Botao2:hover{
     background-color: var(--Cor-Vermelha);
 }
 
-#Botao:active{
+#Botao:active, #Botao2:active{
     background-color: #992624;
     padding: 20px 113px;
     margin: 2px 2px;
