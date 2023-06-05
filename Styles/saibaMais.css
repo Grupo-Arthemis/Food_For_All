@@ -23,6 +23,7 @@
 
 /*----------------- Header ------------------ */
 
+
 header{
     background-color: var(--Cor-Bege);
 }
@@ -68,7 +69,7 @@ header{
     color: var(--Cor-Cinza);
 }
 
-.Menu_Esquerda_Aberto ul{
+.Menu_Esquerda_Aberto{
     display: none;
 }
 
@@ -87,6 +88,67 @@ header{
 
     color: var(--Cor-Verde);
 }
+
+/* Botao darkmode */
+/* The switch - the box around the slider */
+.switch {
+    display: block;
+    --width-of-switch: 3.5em;
+    --height-of-switch: 2em;
+    /* size of sliding icon -- sun and moon */
+    --size-of-icon: 1.4em;
+    /* it is like a inline-padding of switch */
+    --slider-offset: 0.3em;
+    position: relative;
+    width: var(--width-of-switch);
+    height: var(--height-of-switch);
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f4f4f5;
+    transition: .4s;
+    border-radius: 30px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: var(--size-of-icon,1.4em);
+    width: var(--size-of-icon,1.4em);
+    border-radius: 20px;
+    left: var(--slider-offset,0.3em);
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(40deg,#C3423F,#FFCB77 70%);
+    ;
+   transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #303136;
+  }
+  
+  input:checked + .slider:before {
+    left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+    background: #303136;
+    /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+  }
+/* Botao darkmode */
 
 /* -------Main------- */
 
@@ -182,7 +244,7 @@ header{
 }
 
 .custom-shape-divider-top-1685362347 .shape-fill {
-    fill: #F4EFE3;
+    fill: var(--Cor-Bege);
 }
 
 
@@ -280,6 +342,7 @@ footer div{
 @media screen  and (max-width: 500px){
     
     .Menu{
+        padding-top: 2%;
         margin-left: 5%;
         margin-right: 2%;
         height: auto;
@@ -292,62 +355,36 @@ footer div{
         font-size: 20px;
     }
 
-    .Menu ul{
-        width: max-content;
+    .Menu_Esquerda_Simbulo{
+        width: 50px;
     }
-    
-    .Menu_Esquerda div{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .Menu_Esquerda{
-        display: flex;
-        flex-direction: column;
+    .Menu_Esquerda_Simbulo{
+        display: block;
     }
 
     .Menu_Esquerda_Fechado{
-        width: 50px;
+        display: none;
     }
 
-
-
     .Menu_Esquerda_Aberto{
-        width: max-content;
+        display: grid;
+        gap: 1%;
+        grid-template-columns: 65% 25% ;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
     }
 
     .Menu_Esquerda_Aberto ul{
         display: none;
         flex-direction: column;
-        gap: 0;
-        width: max-content;
-        padding-left: 56px;
+        align-items: center;
+        gap: 10px;
     }
 
-    .Menu_Esquerda_Logo{
-        width: 45px;
-        height: 45px;
+    .Menu_Esquerda_Aberto img{
+        width: 70%;
     }
-    
-    .Menu_Esquerda ul{
-        width: auto;
-    }
-    
-    .Menu_Esquerda_Fechado a {
-        display: none;
-    }
-    
-    #Ativo{
-        color: var(--Cor-Vermelha);
-        display: block;
-    }
-
-    .Menu_Esquerda_Simbulo{
-        display: block;
-        width: 100%;
-    } 
 
     /* ---------Main----------- */
 

@@ -7,7 +7,9 @@ if (listaUser == null) {
             nomeUsuario : "Admin",
             emailUsuario : "Admin",
             senhaUsuario: "123456",
-            cpfCnpjUsuario: "12345678901"
+            cpfCnpjUsuario: "12345678901",
+            CodPessoa : "Fisica"
+            
         },
     ];
     localStorage.setItem("listaUser", JSON.stringify(listaDeUsuarios));
@@ -23,8 +25,6 @@ var confirma = document.getElementById("Senha_Confirm");
 
 
 var listaUser = JSON.parse(localStorage.getItem("listaUser"));
-
-
 
 // funcao para limpar os campos depois de cadastrar
 function limparCampos() {
@@ -48,7 +48,7 @@ function validarFormulario() {
     } else if (!emailRegExp.test(email.value)) {
         alert("Por favor, informe um e-mail válido.");
         return false;
-    } else if (nome.value.length < 2 || email.value.lenght < 5) {
+    } else if (nome.value.length < 2 || nome.value.lenght < 20 || email.value.lenght < 5) {
         alert("Os campos nome, CPF / CNPJ e email não atingiram o número mínimo de caracteres.");
         return false;
     } else if (CNPJ.value.length !== 14 && CNPJ.value.length !== 11) {
@@ -159,9 +159,9 @@ document.getElementById("Botao").addEventListener("click", function(event) {
         if (confirmacao) {
             var tipoPessoa = "";
             if (CNPJ.value.length === 14) {
-                tipoPessoa = "Pessoa Jurídica";
+                tipoPessoa = "Juridica";
             } else if (CNPJ.value.length === 11) {
-                tipoPessoa = "Pessoa Física";
+                tipoPessoa = "Fisica";
             }
             document.getElementsByClassName("formulario_itens");
             console.log("Nome: " + nome.value);
@@ -175,7 +175,8 @@ document.getElementById("Botao").addEventListener("click", function(event) {
                 nomeUsuario : nome.value,
                 emailUsuario : email.value,
                 senhaUsuario : senha.value,
-                cpfCnpjUsuario: CNPJ.value
+                cpfCnpjUsuario: CNPJ.value,
+                CodPessoa : tipoPessoa
             };
 
             try{
@@ -210,3 +211,29 @@ document.getElementById("Botao").addEventListener("click", function(event) {
         } 
     }
 });
+
+// Função para data e hora no rodapé
+
+function exibirHoraAtual() {
+    var campoHora = document.getElementById("horaAtual");
+    var campoData = document.getElementById("dataAtual");
+    var dataAtual = new Date();
+    var hora = formatarNumero(dataAtual.getHours());
+    var minutos = formatarNumero(dataAtual.getMinutes());
+    var segundos = formatarNumero(dataAtual.getSeconds());
+    var horaAtual = hora + ":" + minutos + ":" + segundos;
+    campoHora.innerText = horaAtual;
+
+    var dia = formatarNumero(dataAtual.getDate());
+    var mes = formatarNumero(dataAtual.getMonth() + 1);
+    var ano = dataAtual.getFullYear();
+    var dataAtualFormatada = dia + "/" + mes + "/" + ano;
+    campoData.innerText = dataAtualFormatada;
+}
+
+function formatarNumero(numero) {
+    return numero < 10 ? "0" + numero : numero;
+}
+
+// Atualizar a hora atual a cada segundo
+setInterval(exibirHoraAtual, 1000);

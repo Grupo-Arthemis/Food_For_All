@@ -61,8 +61,6 @@ function mascaraTelefone() {
     telefoneInput.value = telefone;
 }
 
-
-
 // // TRANSFORMAR ENDERECO EM CORDENADAS
 
 // // Defina o endereço que você deseja geocodificar
@@ -92,12 +90,6 @@ function mascaraTelefone() {
 //   .catch(error => {
 //     console.error("Erro ao geocodificar o endereço:", error);
 //   });
-
-
-
-
-
-
 
 //---------------------------Tentativa do luan fazer o mapa funcionar
 var apiKey = "70578fd8fde040d1a4ed1b6a52d743a7";
