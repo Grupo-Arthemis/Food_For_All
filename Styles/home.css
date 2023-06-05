@@ -150,7 +150,7 @@
  .Anuncio a{
      text-decoration: none;
 }
- .Anuncio h2{
+ .Section_1 .Anuncio h2{
      margin-top: 10px;
      font-family: var(--Fonte-1);
      font-style: normal;
@@ -242,6 +242,26 @@
      display: flex;
      flex-direction: column;
      padding-bottom: 3%;
+}
+
+.Section_2 .Card{
+    background-color: #3C3C3B;
+    padding: 10px 10px 50px 10px;
+    border-radius: 20px;
+    justify-content: center;
+}
+
+.Section_2 h2{
+    font-family: var(--Fonte-1);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 27px;
+    line-height: 102px;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: 0.1em;
+    color: #F4EFE3;
+    justify-content: center;
 }
  .Section_2>.Anuncio>img{
      width: 376px;
