@@ -245,7 +245,7 @@
      display: flex;
      flex-direction: column;
      align-items: center;
-     background-color: var(--Cor-Cinza);
+     background-color: #3C3C3B;
      padding: 5px 5px 20px 5px;
      border-radius: 25px 25px 25px 25px;
      transition: 500ms;
@@ -278,7 +278,7 @@
      font-size: 40px;
      display: flex;
      align-items: flex-end;
-     color: #3C3C3B;
+     color: #F4EFE3;
 }
  .Section_2 h1{
      justify-content: center;
@@ -298,6 +298,13 @@
      justify-content: space-between;
      align-items: center;
      padding: 0% 2%;
+}
+footer h3{
+    font-family: var(--Fonte-1);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 102px;
 }
  footer div{
      display: flex;
@@ -357,6 +364,12 @@
      .Menu_Direita a{
          font-size: 17px;
     }
+
+     /* The switch - the box around the slider */
+     .switch {
+        --width-of-switch: 1.8em;
+   }
+
     /* ---------Main----------- */
      .Section_1{
          display: flex;

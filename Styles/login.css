@@ -310,6 +310,13 @@ footer{
     align-items: center;
     padding: 0% 2%;
 }
+footer h3{
+    font-family: var(--Fonte-1);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 102px;
+}
 
 footer div{
     display: flex;
@@ -380,6 +387,12 @@ footer div{
     .Menu_Direita a{
         font-size: 17px;
     }
+
+     /* The switch - the box around the slider */
+     .switch {
+        --width-of-switch: 1.8em;
+   }
+
 
     /* ---------Main----------- */
 

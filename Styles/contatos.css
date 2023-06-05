@@ -324,6 +324,14 @@
      gap: 15px;
      color: #b9b9b9;
 }
+
+footer h3{
+    font-family: var(--Fonte-1);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 102px;
+}
  .horario {
      background-color: #3C3C3B;
      color: white;
@@ -375,6 +383,11 @@
      .Menu_Direita a{
          font-size: 17px;
     }
+     /* The switch - the box around the slider */
+     .switch {
+        --width-of-switch: 1.8em;
+   }
+
     /* ---------Main----------- */
      .Section_1{
          display: flex;

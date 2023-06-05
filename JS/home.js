@@ -1,5 +1,4 @@
 // Função para o darkmode
-
 var darkModeInd = JSON.parse(localStorage.getItem("darkModeInd"));
 if (darkModeInd == null) {
     console.log("Darkmode setada para false");
@@ -105,3 +104,51 @@ function formatarNumero(numero) {
 
 // Atualizar a hora atual a cada segundo
 setInterval(exibirHoraAtual, 1000);
+
+
+// Função para detectar usuario logado
+
+var usuarioLogado = JSON.parse(localStorage.getItem("usuario-validado"));
+if (usuarioLogado != null) {
+    console.log("Usuario logado");  
+    console.log(usuarioLogado);
+    var usuarioLogadoNome = usuarioLogado.nomeCompleto;
+    var menuDireita1 = document.querySelectorAll('.Menu_Direita a');
+    var menuDireita2 = document.querySelectorAll('.Menu_Direita li');
+
+    menuDireita2[0].setAttribute('href', '#');
+
+
+    if (document.querySelector('title').innerHTML == 'Home') {
+        menuDireita2[0].innerHTML = ('<img src="./Assets/logout.png" alt="" width=30px></img>');
+    }else{
+        menuDireita2[0].innerHTML = ('<img src="../Assets/logout.png" alt="" width=30px></img>');
+    };
+
+    menuDireita1[1].setAttribute('href', '#');
+    menuDireita1[1].innerText = usuarioLogadoNome;
+
+    if (document.querySelector('title').innerHTML == 'Perfil') {
+        var novoElemento = '<li><a href="./perfil.html" id="Ativo">Perfil</a></li>';
+    }else if(document.querySelector('title').innerHTML == 'Home') {
+        var novoElemento = '<li><a href="./Pages/perfil.html">Perfil</a></li>';
+    }else{
+        var novoElemento = '<li><a href="./perfil.html">Perfil</a></li>';
+    };
+
+    document.querySelector('.Menu_Esquerda_Aberto ul').insertAdjacentHTML('beforeend', novoElemento);
+    document.querySelector('.Menu_Esquerda_Fechado ul').insertAdjacentHTML('beforeend', novoElemento);
+
+    var menuEsquerda = document.querySelectorAll('.Menu_Esquerda_Aberto ul li');
+    menuEsquerda.forEach(element => {
+        console.log(element.innerHTML);
+    });
+    document.querySelector('.Menu_Direita li img').addEventListener('click', () => {
+        console.log('Clicou');
+        usuarioLogado = null;
+        localStorage.setItem("usuario-validado", JSON.stringify(usuarioLogado));
+        window.location.reload();
+    });
+};
+
+

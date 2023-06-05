@@ -57,6 +57,12 @@
  .Menu_Direita{
      justify-content: center;
 }
+
+.Menu_Direita ul{
+    justify-content: center;
+    align-items: center;
+    
+}
  .Menu_Direita a{
      text-decoration: none;
      font-family: var(--Fonte-1);
@@ -67,6 +73,8 @@
      letter-spacing: -0.045em;
      color: var(--Cor-Verde);
 }
+
+
 /* Botao darkmode */
 /* The switch - the box around the slider */
  .switch {
@@ -261,6 +269,13 @@
      align-items: center;
      padding: 0% 2%;
 }
+footer h3{
+    font-family: var(--Fonte-1);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 102px;
+}
  footer div{
      display: flex;
      align-items: center;
@@ -319,6 +334,12 @@
      .Menu_Direita a{
          font-size: 17px;
     }
+
+    /* The switch - the box around the slider */
+    .switch {
+         --width-of-switch: 1.8em;
+    }
+
     /* ---------Main----------- */
      .Section_1{
          display: flex;
