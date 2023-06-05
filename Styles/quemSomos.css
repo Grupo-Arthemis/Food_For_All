@@ -407,7 +407,7 @@ footer div{
     .Menu_Esquerda_Aberto{
         display: grid;
         gap: 1%;
-        grid-template-columns: 65% 25% ;
+        grid-template-columns: 73% 25% ;
         justify-items: center;
         justify-content: center;
         align-items: center;
@@ -424,6 +424,10 @@ footer div{
         width: 70%;
     }
 
+    .Menu_Esquerda_Aberto a{
+        font-size: 17px;
+    }
+
     /* ---------Main----------- */
 
     .Section_1{
@@ -432,12 +436,13 @@ footer div{
         padding-left: 5%;
         padding-right: 5%;
         padding-bottom: 2%;
-        gap: 5%;
+        padding-top: 2%;
+        gap: 3%;
 
     }
 
     .Section_1 h1{
-        font-size: 30px;
+        font-size: 23px;
         height: 50px;
         align-items: center;
 
@@ -536,5 +541,8 @@ footer div{
         width: 20px;
         height: 20px;
 
+    }
+    .horario{
+        font-size: 10px;
     }
 }

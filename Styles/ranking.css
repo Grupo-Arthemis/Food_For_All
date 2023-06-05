@@ -255,7 +255,7 @@ header{
     align-items: center;
     letter-spacing: 0.34em;
 
-    color: #3C3C3B;
+    color: var(--Cor-Cinza);
 }
 
 .Section_2 h2{
@@ -360,7 +360,7 @@ footer div{
     .Menu_Esquerda_Aberto{
         display: grid;
         gap: 1%;
-        grid-template-columns: 65% 25% ;
+        grid-template-columns: 73% 25% ;
         justify-items: center;
         justify-content: center;
         align-items: center;
@@ -377,6 +377,9 @@ footer div{
         width: 70%;
     }
 
+    .Menu_Esquerda_Aberto a{
+        font-size: 17px;
+    }
     /* ---------Main----------- */
 
     .Section_1{
@@ -384,7 +387,7 @@ footer div{
         padding-left: 3%;
         padding-right: 3%;
         padding-bottom: 3%;
-        padding-top: 6%;
+        padding-top: 8%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -449,7 +452,7 @@ footer div{
     display: flex;
     justify-content: center;
     background-color: var(--Cor-Bege);
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 .Section_2 h1{
@@ -464,7 +467,7 @@ footer div{
     align-items: center;
     letter-spacing: 0.34em;
 
-    color: #3C3C3B;
+    color: var(--Cor-Cinza);
 }
 
 .Section_2 h2{
@@ -528,5 +531,8 @@ footer div{
         width: 20px;
         height: 20px;
 
+    }
+    .horario{
+        font-size: 10px;
     }
 }

@@ -206,7 +206,7 @@ header{
     align-items: flex-end;
     letter-spacing: 0.34em;
 
-    color: #3C3C3B;
+    color: var(--Cor-Cinza);
 }
 
 
@@ -290,7 +290,7 @@ header{
     letter-spacing: 0.105em;
 
 
-    color: var(--Cor-Cinza);
+    color: #3C3C3B;
     transition: 200ms;
 }
 
@@ -303,13 +303,14 @@ header{
     align-items: center;
     text-align: start;
 
-    color: var(--Cor-Cinza);
+    color: #3C3C3B;
 
 }
 
-.Section_2 h1{
+.Section_2 .Textos h1{
     justify-content: center;
     align-items: center;
+    color: #3C3C3B;
 }
 
 /*-------------- Footer  ---------------- */
@@ -369,7 +370,7 @@ footer div{
     .Menu_Esquerda_Aberto{
         display: grid;
         gap: 1%;
-        grid-template-columns: 65% 25% ;
+        grid-template-columns: 73% 25% ;
         justify-items: center;
         justify-content: center;
         align-items: center;
@@ -385,6 +386,11 @@ footer div{
     .Menu_Esquerda_Aberto img{
         width: 70%;
     }
+
+    .Menu_Esquerda_Aberto a{
+        font-size: 17px;
+    }
+
 
     /* ---------Main----------- */
 
@@ -449,6 +455,20 @@ footer div{
         align-items: center;
     }
 
+    .Section_2 h2{
+        font-size: 12px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Section_2 p{
+        font-size: 13px;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+    }
+
     .Section_2 .Anuncio img{
         width: 30%;
         height: 30%;
@@ -467,6 +487,9 @@ footer div{
         width: 20px;
         height: 20px;
 
+    }
+    .horario{
+        font-size: 10px;
     }
 }
 

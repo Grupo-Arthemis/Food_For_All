@@ -36,7 +36,11 @@ header{
     color: var(--Cor-Vermelha);
 }
 
-.Menu_Esquerda{
+.Menu_Esquerda_Simbulo{
+    display: none;
+}   
+
+.Menu_Esquerda_Fechado{
     display: flex;
     gap: 50px;
 }
@@ -60,6 +64,10 @@ header{
     color: var(--Cor-Cinza);
 }
 
+.Menu_Esquerda_Aberto{
+    display: none;
+}
+
 .Menu_Direita{
     justify-content: center;
 }
@@ -75,6 +83,67 @@ header{
 
     color: var(--Cor-Verde);
 }
+
+/* Botao darkmode */
+/* The switch - the box around the slider */
+.switch {
+    display: block;
+    --width-of-switch: 3.5em;
+    --height-of-switch: 2em;
+    /* size of sliding icon -- sun and moon */
+    --size-of-icon: 1.4em;
+    /* it is like a inline-padding of switch */
+    --slider-offset: 0.3em;
+    position: relative;
+    width: var(--width-of-switch);
+    height: var(--height-of-switch);
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f4f4f5;
+    transition: .4s;
+    border-radius: 30px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: var(--size-of-icon,1.4em);
+    width: var(--size-of-icon,1.4em);
+    border-radius: 20px;
+    left: var(--slider-offset,0.3em);
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(40deg,#C3423F,#FFCB77 70%);
+    ;
+   transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #303136;
+  }
+  
+  input:checked + .slider:before {
+    left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+    background: #303136;
+    /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+  }
+/* Botao darkmode */
 
 /* -------Main------- */
 
@@ -148,7 +217,7 @@ input{
     height: 100px;
     border-radius: 100px;
     margin: 20px 40px;
-    border: none;
+    border: solid 3px #00000033;
     background-image: url("../Assets/Imagem\ -\ email.svg");
     background-repeat: no-repeat;
     background-position: 5% 50%;
@@ -158,7 +227,7 @@ input{
     background-color: #3C3C3B33;
     height: 100px;
     border-radius: 100px;
-    border: none;
+    border: solid 3px #00000033;
     background-image: url("../Assets/cadeado\ 2.png");
     background-repeat: no-repeat;
     background-position: 5% 50%;
@@ -254,4 +323,204 @@ footer div{
     color: white;
     padding: 10px;
     font-size: 24px;
+}
+
+@media screen  and (max-width: 500px){
+    
+    .Menu{
+        padding-top: 2%;
+        margin-left: 5%;
+        margin-right: 2%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: initial;
+    }
+
+    .Menu a{
+        font-size: 20px;
+    }
+
+    .Menu_Esquerda_Simbulo{
+        width: 50px;
+    }
+    .Menu_Esquerda_Simbulo{
+        display: block;
+    }
+
+    .Menu_Esquerda_Fechado{
+        display: none;
+    }
+
+    .Menu_Esquerda_Aberto{
+        display: grid;
+        gap: 1%;
+        grid-template-columns: 73% 25% ;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Menu_Esquerda_Aberto ul{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .Menu_Esquerda_Aberto img{
+        width: 70%;
+    }
+
+    .Menu_Esquerda_Aberto a{
+        font-size: 17px;
+    }
+
+
+    /* ---------Main----------- */
+
+    .Section_1{
+        display: flex;
+        flex-direction: column-reverse;
+
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 15%;
+        gap: 50px;
+
+    }
+
+    .Section_1 h1{
+        font-size: 25px;
+        height: 100px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .Section_1 img{
+        width: 40%;
+    }
+
+    /* Formulario  */
+    .Formulario{
+        background-color: var(--Cor-Bege);
+        box-shadow: 0px 4px 34px 8px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 40px;
+        padding-top: 40px;
+        gap: 30px;
+    }
+    
+    input{
+        font-family: var(--Fonte-2);
+        font-style: normal;
+        font-weight: 700;
+        font-size:20px;
+        padding-left: 50px;
+        color: var(--Cor-Cinza);
+    }
+    
+    .Formulario ::placeholder{
+        font-family: var(--Fonte-2);
+        font-style: normal;
+        font-weight: 700;
+        font-size:20px;
+        padding-left: 10px;
+    
+    
+        color: var(--Cor-Cinza);
+    }
+    
+    #Email{
+        background-color: #3C3C3B33;
+        height: 50px;
+        border-radius: 100px;
+        margin: 10px;
+        border: solid 3px #00000033;
+        background-image: url("../Assets/Imagem\ -\ email.svg");
+        background-size: 8%;
+        background-repeat: no-repeat;
+        background-position: 5% 50%;
+    }
+
+    #Senha{
+        background-color: #3C3C3B33;
+        height: 50px;
+        border-radius: 100px;
+        margin: 10px;
+        border: solid 3px #00000033;
+        background-image: url("../Assets/cadeado\ 2.png");
+        background-size: 8%;
+        background-repeat: no-repeat;
+        background-position: 5% 50%;
+    }
+    
+    #Botao{
+        background-color: var(--Cor-Verde);
+        align-self: center;
+        padding: 12px 70px;
+        border-radius: 100px;
+        border: none;
+    
+        font-family: var(--Fonte-2);
+        font-style: normal;
+        font-weight: 900;
+        font-size: 12px;
+    
+        color: var(--Cor-Bege);
+    
+        cursor: pointer;
+    }
+    
+    #Botao:hover{
+        background-color: var(--Cor-Vermelha);
+    }
+    
+    #Botao:active{
+        background-color: #992624;
+        padding: 10px 68px;
+        margin: 2px 2px;
+    }
+
+    .Section_2 h2{
+        font-size: 25px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+    }
+
+    .Section_1 p{
+        font-size: 30px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+    }
+
+
+    /* Formulario Fim */
+
+
+
+    footer{
+        height: 30px;
+        padding: 0% 5%;
+    }
+
+    footer h3{
+        font-size: 10px;
+    }
+
+    footer img{
+        width: 20px;
+        height: 20px;
+
+    }
+    .horario{
+        font-size: 10px;
+    }
 }

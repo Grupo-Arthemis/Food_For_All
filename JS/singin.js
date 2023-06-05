@@ -48,7 +48,7 @@ function validarFormulario() {
     } else if (!emailRegExp.test(email.value)) {
         alert("Por favor, informe um e-mail válido.");
         return false;
-    } else if (nome.value.length < 2 || nome.value.lenght < 20 || email.value.lenght < 5) {
+    } else if (nome.value.length < 2 || nome.value.length > 20 || email.value.length < 5) {
         alert("Os campos nome, CPF / CNPJ e email não atingiram o número mínimo de caracteres.");
         return false;
     } else if (CNPJ.value.length !== 14 && CNPJ.value.length !== 11) {
@@ -71,7 +71,7 @@ nome.addEventListener("focus", ()=>{
 });
 
 nome.addEventListener("keyup", ()=>{
-    if(nome.value.length < 2){
+    if(nome.value.length < 2 || nome.value.length > 20){
         nome.setAttribute("style","outline-color:#ff0000;")
         
     }else{

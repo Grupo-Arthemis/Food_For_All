@@ -311,7 +311,7 @@ footer div{
     .Menu_Esquerda_Aberto{
         display: grid;
         gap: 1%;
-        grid-template-columns: 65% 25% ;
+        grid-template-columns: 73% 25% ;
         justify-items: center;
         justify-content: center;
         align-items: center;
@@ -326,6 +326,10 @@ footer div{
 
     .Menu_Esquerda_Aberto img{
         width: 70%;
+    }
+
+    .Menu_Esquerda_Aberto a{
+        font-size: 17px;
     }
 
     /* ---------Main----------- */
@@ -421,5 +425,8 @@ footer div{
         width: 20px;
         height: 20px;
 
+    }
+    .horario{
+        font-size: 10px;
     }
 }

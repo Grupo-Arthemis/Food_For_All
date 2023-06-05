@@ -17,6 +17,9 @@ if (darkModeInd == null) {
 
 function darkModeTrue() {
     var root = document.documentElement;
+    var LogoFechado = document.querySelector('.Menu_Esquerda_Fechado .Menu_Esquerda_Logo');
+    var LogoAberto = document.querySelector('.Menu_Esquerda_Aberto .Menu_Esquerda_Logo');
+    
     console.log('Darkmode ativado');
     root.style.setProperty("--Cor-Bege", "#3C3C3B");
     root.style.setProperty("--Cor-Cinza", "#F4EFE3");
@@ -24,16 +27,23 @@ function darkModeTrue() {
     document.querySelector('body').style.backgroundColor = '#3C3C3B';
     let darkModeInd = true
     localStorage.setItem("darkModeInd", JSON.stringify(darkModeInd));
-};
+    LogoFechado.setAttribute('src', '../Assets/LogoDarkMode.png');
+    LogoAberto.setAttribute('src', '../Assets/LogoDarkMode.png');
+    };
 
 function darkModeFalse(){
     var root = document.documentElement;
+    var LogoFechado = document.querySelector('.Menu_Esquerda_Fechado .Menu_Esquerda_Logo');
+    var LogoAberto = document.querySelector('.Menu_Esquerda_Aberto .Menu_Esquerda_Logo');
+
     console.log('Darkmode desativado');
     root.style.setProperty("--Cor-Bege", "#F4EFE3");
     root.style.setProperty("--Cor-Cinza", "#3C3C3B");
     document.querySelector('body').style.backgroundColor = '#F4EFE3';
     let darkModeInd = false
     localStorage.setItem("darkModeInd", JSON.stringify(darkModeInd));
+    LogoFechado.setAttribute('src', '../Assets/Logo.png');
+    LogoAberto.setAttribute('src', '../Assets/Logo.png');
 };
 
 const DarkMode = document.getElementById('darkModeButton');
@@ -85,5 +95,3 @@ function formatarNumero(numero) {
 
 // Atualizar a hora atual a cada segundo
 setInterval(exibirHoraAtual, 1000);
-
-

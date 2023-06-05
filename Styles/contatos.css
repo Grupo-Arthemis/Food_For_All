@@ -408,3 +408,228 @@ footer div{
     padding: 10px;
     font-size: 24px;
 }
+
+@media screen  and (max-width: 500px){
+    
+    .Menu{
+        padding-top: 2%;
+        margin-left: 5%;
+        margin-right: 2%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: initial;
+    }
+
+    .Menu a{
+        font-size: 20px;
+    }
+
+    .Menu_Esquerda_Simbulo{
+        width: 50px;
+    }
+    .Menu_Esquerda_Simbulo{
+        display: block;
+    }
+
+    .Menu_Esquerda_Fechado{
+        display: none;
+    }
+
+    .Menu_Esquerda_Aberto{
+        display: grid;
+        gap: 1%;
+        grid-template-columns: 73% 25% ;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Menu_Esquerda_Aberto ul{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .Menu_Esquerda_Aberto img{
+        width: 70%;
+    }
+
+    .Menu_Esquerda_Aberto a{
+        font-size: 17px;
+    }
+
+
+    /* ---------Main----------- */
+
+    .Section_1{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 2%;
+        gap: 5%;
+
+    }
+
+    .Section_1 h1{
+        font-size: 25px;
+        height: 100px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .Section_1 img{
+        width: 60%;
+    }
+
+    /* Formulario  */
+    .Formulario{
+        background-color: var(--Cor-Bege);
+        box-shadow: 0px 4px 34px 8px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 15px;
+    }
+    
+    input{
+        font-family: var(--Fonte-2);
+        font-style: normal;
+        font-weight: 700;
+        font-size:20px;
+        padding-left: 50px;
+        color: var(--Cor-Cinza);
+    }
+    
+    .Formulario ::placeholder{
+        font-family: var(--Fonte-2);
+        font-style: normal;
+        font-weight: 700;
+        font-size:20px;
+        padding-left: 10px;
+    
+    
+        color: var(--Cor-Cinza);
+    }
+    
+    #Nome{
+        background-color: #3C3C3B33;
+        height: 50px;
+        border-radius: 100px;
+        margin: 20px;
+        border: solid 3px #00000033;
+        background-image: url("../Assets/do-utilizador\ 1.png");
+        background-size: 8%;
+        background-repeat: no-repeat;
+        background-position: 5% 50%;
+    }
+    
+    #Email{
+        background-color: #3C3C3B33;
+        height: 50px;
+        border-radius: 100px;
+        margin: 20px;
+        border: solid 3px #00000033;
+        background-image: url("../Assets/Imagem\ -\ email.svg");
+        background-size: 8%;
+        background-repeat: no-repeat;
+        background-position: 5% 50%;
+    }
+    
+    #Telefone{
+        background-color: #3C3C3B33;
+        height: 50px;
+        border-radius: 100px;
+        margin: 20px;
+        border: solid 3px #00000033;
+        background-image: url("../Assets/telefone\ 1.png");
+        background-size: 8%;
+        background-repeat: no-repeat;
+        background-position: 5% 50%;
+    }
+    
+    #Mensagem{
+        background-color: #3C3C3B33;
+        height: 50px;
+        border-radius: 75px;
+        margin: 20px;
+        border: solid 3px #00000033;
+        background-image: url("../Assets/Imagem\ -\ mensagem.svg");
+        background-size: 8%;
+        background-repeat: no-repeat;
+        background-position: 5% 50%;
+    }
+    
+    #cep{
+        background-color: var(--Cor-Bege);
+        height: 50px;
+        border-radius: 100px;
+        margin: 20px;
+        border: solid 3px #00000033;
+        background-image: url("../Assets/telefone\ 1.png");
+        background-size: 8%;
+        background-repeat: no-repeat;
+        background-position: 5% 50%;
+    }
+    
+    #Botao{
+        background-color: var(--Cor-Verde);
+        align-self: center;
+        padding: 12px 70px;
+        border-radius: 100px;
+        border: none;
+    
+        font-family: var(--Fonte-2);
+        font-style: normal;
+        font-weight: 900;
+        font-size: 12px;
+    
+        color: var(--Cor-Bege);
+    
+        cursor: pointer;
+    }
+    
+    #Botao:hover{
+        background-color: var(--Cor-Vermelha);
+    }
+    
+    #Botao:active{
+        background-color: #992624;
+        padding: 10px 68px;
+        margin: 2px 2px;
+    }
+
+    .Section_2 h2{
+        font-size: 25px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+    }
+
+
+    /* Formulario Fim */
+
+
+
+    footer{
+        height: 30px;
+        padding: 0% 5%;
+    }
+
+    footer h3{
+        font-size: 10px;
+    }
+
+    footer img{
+        width: 20px;
+        height: 20px;
+
+    }
+    .horario{
+        font-size: 10px;
+    }
+}
