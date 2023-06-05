@@ -460,8 +460,13 @@ footer div{
         align-items: center;
     }
 
+    .Section_2{
+        justify-content: center;
+        align-items: center;
+    }
+
     .Section_2 h2{
-        font-size: 10px;
+        font-size: 17px;
         justify-content: center;
         align-items: center;
     }
@@ -470,6 +475,13 @@ footer div{
         font-size: 13px;
         justify-content: center;
         align-items: center;
+    }
+
+    .Section_2 .Cards{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        width: 60vw;
     }
 
     .Section_2 .Anuncio img{
