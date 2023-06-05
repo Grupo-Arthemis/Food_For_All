@@ -271,7 +271,7 @@ header{
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     padding: 10% 8% 20% 8%;
     text-align: center;
@@ -461,7 +461,7 @@ footer div{
     }
 
     .Section_2 h2{
-        font-size: 12px;
+        font-size: 10px;
         justify-content: center;
         align-items: center;
     }
