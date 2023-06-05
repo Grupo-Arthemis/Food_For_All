@@ -27,9 +27,14 @@ function darkModeTrue() {
     document.querySelector('body').style.backgroundColor = '#3C3C3B';
     let darkModeInd = true
     localStorage.setItem("darkModeInd", JSON.stringify(darkModeInd));
-    LogoFechado.setAttribute('src', '../Assets/LogoDarkMode.png');
-    LogoAberto.setAttribute('src', '../Assets/LogoDarkMode.png');
+    if (document.querySelector('title').innerHTML == 'Home') {
+        LogoFechado.setAttribute('src', './Assets/LogoDarkMode.png');
+        LogoAberto.setAttribute('src', './Assets/LogoDarkMode.png');
+    }else{
+        LogoFechado.setAttribute('src', '../Assets/LogoDarkMode.png');
+        LogoAberto.setAttribute('src', '../Assets/LogoDarkMode.png');
     };
+};
 
 function darkModeFalse(){
     var root = document.documentElement;
@@ -42,8 +47,13 @@ function darkModeFalse(){
     document.querySelector('body').style.backgroundColor = '#F4EFE3';
     let darkModeInd = false
     localStorage.setItem("darkModeInd", JSON.stringify(darkModeInd));
-    LogoFechado.setAttribute('src', '../Assets/Logo.png');
-    LogoAberto.setAttribute('src', '../Assets/Logo.png');
+    if (document.querySelector('title').innerHTML == 'Home') {
+        LogoFechado.setAttribute('src', './Assets/Logo.png');
+        LogoAberto.setAttribute('src', './Assets/Logo.png');
+    }else{
+        LogoFechado.setAttribute('src', '../Assets/Logo.png');
+        LogoAberto.setAttribute('src', '../Assets/Logo.png');
+    };
 };
 
 const DarkMode = document.getElementById('darkModeButton');
