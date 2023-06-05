@@ -340,13 +340,20 @@ header{
     display: flex;
     align-items: flex-end;
 
-    color: var(--Cor-Bege);
+    color: #3C3C3B;
 
 }
 
 .Section_2 h1{
     justify-content: center;
     align-items: center;
+    color: #3C3C3B;
+}
+
+.Section_2 h3{
+    justify-content: center;
+    align-items: center;
+    color: #3C3C3B;
 }
 
 /*-------------- Footer  ---------------- */
