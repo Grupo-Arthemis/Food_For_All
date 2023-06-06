@@ -24,13 +24,13 @@ botao.addEventListener("click", ()=>{
         const msgError = document.querySelector("#msgError");
 
         let usuarioValidado = {
-            usuarioInput : document.querySelector("#Email").value,
+            email : document.querySelector("#Email").value,
             senhaInput : document.querySelector("#Senha").value,
         }
 
         try{
             listaUser.forEach((usuario)=>{
-                if(usuarioValidado.usuarioInput == usuario.emailUsuario && usuarioValidado.senhaInput == usuario.senhaUsuario){
+                if(usuarioValidado.email == usuario.emailUsuario && usuarioValidado.senhaInput == usuario.senhaUsuario){
                     usuarioValidado["nomeCompleto"] = usuario.nomeUsuario;
                     usuarioValidado["cpfCnpj"] = usuario.cpfCnpjUsuario;
                     throw "VALIDADO!";

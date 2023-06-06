@@ -2,6 +2,7 @@
 var darkModeInd = JSON.parse(localStorage.getItem("darkModeInd"));
 if (darkModeInd == null) {
     console.log("Darkmode setada para false");
+    window.alert("Seja bem vindo ao Food For All!");
     let darkModeInd = false
     localStorage.setItem("darkModeInd", JSON.stringify(darkModeInd));
 }else if(darkModeInd == true){

@@ -181,7 +181,7 @@
      height: 100px;
      border-radius: 100px;
      margin: 20px 40px;
-     border: none;
+     border: solid 3px #00000033;
      background-image: url("../Assets/do-utilizador\ 1.png");
      background-repeat: no-repeat;
      background-position: 5% 50%;
@@ -191,7 +191,7 @@
      height: 100px;
      border-radius: 100px;
      margin: 20px 40px;
-     border: none;
+     border: solid 3px #00000033;
      background-image: url("../Assets/Imagem\ -\ email.svg");
      background-repeat: no-repeat;
      background-position: 5% 50%;
@@ -201,7 +201,7 @@
      height: 100px;
      border-radius: 75px;
      margin: 20px 40px;
-     border: none;
+     border: solid 3px #00000033;
      background-image: url("../Assets/documentos-google\ 1.png");
      background-repeat: no-repeat;
      background-position: 5% 50%;
@@ -211,7 +211,7 @@
      height: 100px;
      border-radius: 100px;
      margin: 20px 40px;
-     border: none;
+     border: solid 3px #00000033;
      background-image: url("../Assets/cadeado\ 2.png");
      background-repeat: no-repeat;
      background-position: 5% 50%;
@@ -221,7 +221,7 @@
      height: 100px;
      border-radius: 100px;
      margin: 20px 40px;
-     border: none;
+     border: solid 3px #00000033;
      background-image: url("../Assets/cadeado\ 2.png");
      background-repeat: no-repeat;
      background-position: 5% 50%;
