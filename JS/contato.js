@@ -75,13 +75,19 @@ function mascaraCep() {
     }
 
     cepInput.value = cep;
-  }
+}
 
 const apiKey = '70578fd8fde040d1a4ed1b6a52d743a7';
 let mapa; // Variável global para o mapa
+let latitude = -23.5505199;
+let longitude = -46.6333094;
+
+const country_code = 'BR';
 
 const enviarCep = document.getElementById("Botao2");
 const cepe = document.getElementById("cep");
+
+initMap(latitude, longitude);
 
 enviarCep.addEventListener("click", function() {
     const cep = cepe.value;
@@ -92,8 +98,6 @@ enviarCep.addEventListener("click", function() {
             const { latitude, longitude } = result;
             if (mapa) {
                 changeMapView(latitude, longitude);
-            } else {
-                initMap(latitude, longitude);
             }
         });
     } else {
@@ -102,7 +106,7 @@ enviarCep.addEventListener("click", function() {
 });
 
 function CEP(cep) {
-    const url = `https://api.opencagedata.com/geocode/v1/json?q=${cep}&key=${apiKey}`;
+    const url = `https://api.opencagedata.com/geocode/v1/json?q=${cep}&countrycode=${country_code}&key=${apiKey}`;
     return fetch(url)
         .then(response => response.json())
         .then(data => {
@@ -128,14 +132,14 @@ function initMap(latitude, longitude) {
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-        maxZoom: 20,
+        maxZoom: 18,
     }).addTo(mapa);
 
-    var marcador = L.marker([latitude, longitude]).addTo(mapa);
+    L.marker([-23.5625901,  -46.6554632]).addTo(mapa);
 }
 
 function changeMapView(latitude, longitude) {
     if (mapa) {
-        mapa.setView([latitude, longitude]);
+        mapa.setView([latitude, longitude],18);
     }
 }
