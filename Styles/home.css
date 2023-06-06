@@ -263,10 +263,7 @@
     color: #F4EFE3;
     justify-content: center;
 }
- .Section_2>.Anuncio>img{
-     width: 376px;
-     height: 490px;
-}
+
  .Section_2 >.Anuncio{
      display: flex;
      flex-direction: row;
@@ -394,9 +391,7 @@ footer h3{
          align-items: center;
          margin-top: 10%;
     }
-     .Anuncio img{
-         width: 50%;
-    }
+
      .Anuncio h2{
          font-size: 15px;
          padding: 10px 90px;
@@ -411,9 +406,27 @@ footer h3{
          align-items: center;
     }
      .Section_2 .Anuncio img{
-         width: 30%;
-         height: 30%;
+         width: 90%;
+         height: 90%;
     }
+
+    .Card{
+        display: flex;
+        flex-direction: column;
+        width: a;
+        align-items: center;
+    }
+
+    .Card h2{
+        font-size: 20px;
+        padding: 10px 0px;
+    }
+
+    .Section_2 img{
+        width: 500px;
+        height: 500px;
+    }
+
      footer{
          height: 30px;
          padding: 0% 5%;
