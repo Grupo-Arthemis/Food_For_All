@@ -61,6 +61,22 @@ function mascaraTelefone() {
     telefoneInput.value = telefone;
 }
 
+function mascaraCep() {
+    var cepInput = document.getElementById("cep");
+    var cep = cepInput.value.replace(/\D/g, ""); // Remover todos os caracteres não numéricos
+
+    if (cep.length > 8) {
+      cep = cep.slice(0, 8); // Limitar o número de dígitos a 8
+    }
+
+    // Formatar o cep com a máscara desejada
+    if (cep.length === 8) {
+      cep = cep.replace(/^(\d{5})(\d{3})$/, "$1-$2");
+    }
+
+    cepInput.value = cep;
+  }
+
 // // TRANSFORMAR ENDERECO EM CORDENADAS
 
 // // Defina o endereço que você deseja geocodificar
