@@ -231,12 +231,13 @@ header{
     font-family: var(--Fonte-2);
     font-style: normal;
     font-weight: 900;
-    font-size: 30px;
+    font-size: 25px;
     padding-left: 110px;
     border-radius: 100px;
     display: flex;
     align-items: flex-end;
     letter-spacing: 0.05em;
+    align-items: center;
 
     color: var(--Cor-Cinza);
 }
