@@ -446,12 +446,31 @@ footer h3{
          padding-left: 10px;
          color: var(--Cor-Cinza);
     }
-     #Nome, #Email, #CNPJ, #Senha, #Senha_Confirm{
+     #Nome, #Email, #CNPJ{
          background-color: #3C3C3B33;
          height: 50px;
          border: solid 3px #00000033;
          background-size: 8%;
     }
+
+    #Senha, #Senha_Confirm{
+        background-color: #3C3C3B33;
+        height: 50px;
+        border: solid 3px #00000033;
+        background-size: 8%;
+        background-color: transparent;
+        outline: none;    
+        border: none; 
+    }
+
+    .Senha, .Senha_Confirm{
+        background-color: #3C3C3B33;
+        height: 50px;
+        border: solid 3px #00000033;
+        background-size: 8%;
+        width: 83%;
+    }
+
      #Botao{
          background-color: var(--Cor-Verde);
          align-self: center;
