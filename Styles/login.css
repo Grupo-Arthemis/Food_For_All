@@ -6,14 +6,6 @@
     max-width: 100%;
 }
 
-.fa-eye{
-    /* position: absolute; */
-    top: 15px;
-    right: 10px;
-    cursor: pointer;
-    color: #739578;
-}
-
 :root{
     
     --Cor-Bege: #F4EFE3;
@@ -231,15 +223,32 @@ input{
     background-position: 5% 50%;
 }
 
-#Senha{
+.Senha{
     background-color: #3C3C3B33;
+    margin: 20px 40px;
     height: 100px;
     border-radius: 100px;
     border: solid 3px #00000033;
     background-image: url("../Assets/cadeado\ 2.png");
     background-repeat: no-repeat;
     background-position: 5% 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 40px;
+    font-size: 40px;
+    width: 63%;
 }
+
+#Senha{
+    background-color: transparent;
+    border: none;
+}
+
+#Senha:focus{
+    outline: none;
+}
+
 
 
 #Botao{
@@ -267,6 +276,13 @@ input{
     background-color: #992624;
     padding: 20px 113px;
     margin: 2px 2px;
+}
+
+
+.fa-eye{
+    position: relative;
+    cursor: pointer;
+    color: #739578;
 }
 
 /*------------ Textos Direita ------------*/

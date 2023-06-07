@@ -19,6 +19,44 @@ const botao = document.querySelector("#Botao");
 
 console.log(botao)
 
+// Validacao de Login
+
+document.addEventListener("keypress", function(event) {
+    let listaUser = JSON.parse(localStorage.getItem("listaUser"));
+    const msgError = document.querySelector("#msgError");
+
+    let usuarioValidado = {
+        email: document.querySelector("#Email").value,
+        senhaInput: document.querySelector("#Senha").value,
+    }
+
+    if (event.key === "Enter") {
+        try {
+            listaUser.forEach((usuario) => {
+                if (usuarioValidado.email == usuario.emailUsuario && usuarioValidado.senhaInput == usuario.senhaUsuario) {
+                    usuarioValidado["nomeCompleto"] = usuario.nomeUsuario;
+                    usuarioValidado["cpfCnpj"] = usuario.cpfCnpjUsuario;
+                    throw "VALIDADO!";
+                }
+            });
+    
+            throw "Usuário ou senha inválidos!";
+        } catch (msg) {
+            if (msg == "VALIDADO!") {
+                localStorage.setItem("usuario-validado", JSON.stringify(usuarioValidado));
+                msgError.setAttribute("style", "color:#F4EFE3;background-color:#618985;display:block;");
+                msgError.innerHTML = "<strong>Usuário validado!</strong>";
+                setTimeout(function() {
+                    window.location.href = "../index.html";
+                }, 3000);
+            } else {
+                msgError.innerHTML = "<strong>Login inválido!</strong>";
+                msgError.setAttribute("style", "color:#F4EFE3;display:block;");
+            }
+        }
+    }
+});
+
 botao.addEventListener("click", ()=>{
         let listaUser = JSON.parse(localStorage.getItem("listaUser"));
         const msgError = document.querySelector("#msgError");

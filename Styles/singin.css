@@ -215,26 +215,41 @@
      background-repeat: no-repeat;
      background-position: 5% 50%;
 }
- #Senha{
-     background-color: #3C3C3B33;
-     height: 100px;
-     border-radius: 100px;
-     margin: 20px 40px;
-     border: solid 3px #00000033;
-     background-image: url("../Assets/cadeado\ 2.png");
-     background-repeat: no-repeat;
-     background-position: 5% 50%;
+
+.Senha{
+    display: flex;
+    align-items: center;
+    background-color: #3C3C3B33;
+    height: 100px;
+    border-radius: 100px;
+    margin: 20px 40px;
+    border: solid 3px #00000033;
+    background-image: url("../Assets/cadeado\ 2.png");
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
+    width: 88%;
+    padding-right: 40px;
+    font-size: 40px;
 }
+
+#Senha{
+    background-color: transparent;
+    outline: none;    
+    border: none; 
+}
+
+ #Senha:focus, #Senha_Confirm:focus{
+        outline: none;    
+        border: none; 
+
+}
+
  #Senha_Confirm{
-     background-color: #3C3C3B33;
-     height: 100px;
-     border-radius: 100px;
-     margin: 20px 40px;
-     border: solid 3px #00000033;
-     background-image: url("../Assets/cadeado\ 2.png");
-     background-repeat: no-repeat;
-     background-position: 5% 50%;
+    background-color: transparent;
+    outline: none;    
+    border: none; 
 }
+
  #Botao{
      background-color: var(--Cor-Verde);
      align-self: center;

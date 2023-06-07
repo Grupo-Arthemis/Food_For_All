@@ -146,9 +146,13 @@ if (usuarioLogado != null) {
     });
     document.querySelector('.Menu_Direita li img').addEventListener('click', () => {
         console.log('Clicou');
-        usuarioLogado = null;
-        localStorage.setItem("usuario-validado", JSON.stringify(usuarioLogado));
-        window.location.reload();
+        var confirmacao = confirm("Deseja mesmo sair? ");
+        if (confirmacao) {
+            usuarioLogado = null;
+            localStorage.setItem("usuario-validado", JSON.stringify(usuarioLogado));
+            window.location.reload();
+            // return false;
+        }
     });
 };
 

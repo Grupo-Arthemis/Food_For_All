@@ -134,6 +134,7 @@
  .Section_1{
      background-color: var(--Cor-Bege);
      padding-left: 5%;
+     padding-right: 5%;
      padding-bottom: 2%;
      padding-top: 50px;
      display: grid;
@@ -164,9 +165,9 @@
      color: var(--Cor-Bege);
      transition: 200ms;
 }
- .Anuncio h2:hover{
+.Section_1 .Anuncio h2:hover{
      background-color: var(--Cor-Vermelha);
-     /* padding: 20px 59px; */
+     padding: 20px 59px;
      transition: 200ms;
 }
 /*------------ Textos Esquerda ------------*/
