@@ -1,221 +1,219 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@700;900&family=Baloo+2:wght@400;700&display=swap');
 
- *{
-     margin: 0;
-     padding: 0;
-     max-width: 100%;
+*{
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
 }
-
 .fa-eye{
-    /* position: absolute; */
+   /* position: absolute;
+    */
     top: 15px;
     right: 10px;
     cursor: pointer;
     color: #739578;
-  }
-
- :root{
-     --Cor-Bege: #F4EFE3;
-     --Cor-Cinza: #3C3C3B;
-     --Cor-Verde: #618985;
-     --Cor-Vermelha: #C3423F;
-     --Cor-Amarela: #FFCB77;
-     --Fonte-1: 'Alegreya Sans SC';
-     --Fonte-2: 'Baloo 2';
 }
- header{
-     background-color: var(--Cor-Bege);
+:root{
+    --Cor-Bege: #F4EFE3;
+    --Cor-Cinza: #3C3C3B;
+    --Cor-Verde: #618985;
+    --Cor-Vermelha: #C3423F;
+    --Cor-Amarela: #FFCB77;
+    --Fonte-1: 'Alegreya Sans SC';
+    --Fonte-2: 'Baloo 2';
 }
- .Menu{
-     margin-left: 5%;
-     height: 150px;
-     display: grid;
-     gap: 10%;
-     grid-template-columns: 60% 30%;
-     align-items: center;
+header{
+    background-color: var(--Cor-Bege);
 }
- #Ativo{
-     color: var(--Cor-Vermelha);
+.Menu{
+    margin-left: 5%;
+    height: 150px;
+    display: grid;
+    gap: 10%;
+    grid-template-columns: 60% 30%;
+    align-items: center;
 }
- .Menu_Esquerda_Simbulo{
-     display: none;
+#Ativo{
+    color: var(--Cor-Vermelha);
 }
- .Menu_Esquerda_Fechado{
-     display: flex;
-     gap: 50px;
+.Menu_Esquerda_Simbulo{
+    display: none;
 }
- .Menu ul{
-     display: flex;
-     align-items: center;
-     list-style: none;
-     gap: 30px;
+.Menu_Esquerda_Fechado{
+    display: flex;
+    gap: 50px;
 }
- .Menu_Esquerda a{
-     text-decoration: none;
-     font-family: var(--Fonte-1);
-     font-style: normal;
-     font-weight: 700;
-     font-size: 32px;
-     line-height: 38px;
-     letter-spacing: -0.045em;
-     color: var(--Cor-Cinza);
+.Menu ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
 }
- .Menu_Esquerda_Aberto{
-     display: none;
+.Menu_Esquerda a{
+    text-decoration: none;
+    font-family: var(--Fonte-1);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: -0.045em;
+    color: var(--Cor-Cinza);
 }
- .Menu_Direita{
-     justify-content: center;
+.Menu_Esquerda_Aberto{
+    display: none;
 }
- .Menu_Direita a{
-     text-decoration: none;
-     font-family: var(--Fonte-1);
-     font-style: normal;
-     font-weight: 900;
-     font-size: 40px;
-     line-height: 48px;
-     letter-spacing: -0.045em;
-     color: var(--Cor-Verde);
+.Menu_Direita{
+    justify-content: center;
+}
+.Menu_Direita a{
+    text-decoration: none;
+    font-family: var(--Fonte-1);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.045em;
+    color: var(--Cor-Verde);
 }
 /* Botao darkmode */
 /* The switch - the box around the slider */
- .switch {
-     display: block;
-     --width-of-switch: 3.5em;
-     --height-of-switch: 2em;
-    /* size of sliding icon -- sun and moon */
-     --size-of-icon: 1.4em;
-    /* it is like a inline-padding of switch */
-     --slider-offset: 0.3em;
-     position: relative;
-     width: var(--width-of-switch);
-     height: var(--height-of-switch);
+.switch {
+    display: block;
+    --width-of-switch: 3.5em;
+    --height-of-switch: 2em;
+   /* size of sliding icon -- sun and moon */
+    --size-of-icon: 1.4em;
+   /* it is like a inline-padding of switch */
+    --slider-offset: 0.3em;
+    position: relative;
+    width: var(--width-of-switch);
+    height: var(--height-of-switch);
 }
 /* Hide default HTML checkbox */
- .switch input {
-     opacity: 0;
-     width: 0;
-     height: 0;
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 /* The slider */
- .slider {
-     position: absolute;
-     cursor: pointer;
-     top: 0;
-     left: 0;
-     right: 0;
-     bottom: 0;
-     background-color: #f4f4f5;
-     transition: .4s;
-     border-radius: 30px;
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f4f4f5;
+    transition: .4s;
+    border-radius: 30px;
 }
- .slider:before {
-     position: absolute;
-     content: "";
-     height: var(--size-of-icon,1.4em);
-     width: var(--size-of-icon,1.4em);
-     border-radius: 20px;
-     left: var(--slider-offset,0.3em);
-     top: 50%;
-     transform: translateY(-50%);
-     background: linear-gradient(40deg,#C3423F,#FFCB77 70%);
-     ;
-     transition: .4s;
+.slider:before {
+    position: absolute;
+    content: "";
+    height: var(--size-of-icon,1.4em);
+    width: var(--size-of-icon,1.4em);
+    border-radius: 20px;
+    left: var(--slider-offset,0.3em);
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(40deg,#C3423F,#FFCB77 70%);
+    ;
+    transition: .4s;
 }
- input:checked + .slider {
-     background-color: #303136;
+input:checked + .slider {
+    background-color: #303136;
 }
- input:checked + .slider:before {
-     left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
-     background: #303136;
-    /* change the value of second inset in box-shadow to change the angle and direction of the moon */
-     box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+input:checked + .slider:before {
+    left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+    background: #303136;
+   /* change the value of second inset in box-shadow to change the angle and direction of the moon */
+    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
 }
 /* Botao darkmode */
 /* -------Main------- */
- .Section_1{
-     display: grid;
-     justify-content: space-between;
-     grid-template-columns: 50% 40%;
-     background-color: var(--Cor-Bege);
-     padding-left: 5%;
-     padding-right: 5%;
-     padding-bottom: 2%;
-     padding-top: 1%;
+.Section_1{
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 50% 40%;
+    background-color: var(--Cor-Bege);
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 2%;
+    padding-top: 1%;
 }
 /*------------ Gif da Direita ------------*/
- .Formulario{
-     background-color: var(--Cor-Bege);
-     box-shadow: 0px 4px 34px 8px rgba(0, 0, 0, 0.25);
-     border-radius: 30px;
-     display: flex;
-     justify-content: center;
-     flex-direction: column;
-     padding-bottom: 30px;
-     padding-top: 30px;
-     align-items: center;
-     width: 100%;
+.Formulario{
+    background-color: var(--Cor-Bege);
+    box-shadow: 0px 4px 34px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    align-items: center;
+    width: 100%;
 }
- #msgError{
-     width: 80%;
-     text-align: center;
-     color: #ff0000;
-     background-color: #C3423F;
-     padding: 10px;
-     border-radius: 20px;
-     display: none;
-     font-family: var(--Fonte-2);
-     font-style: normal;
-     font-weight: 700;
-     font-size:40px;
+#msgError{
+    width: 80%;
+    text-align: center;
+    color: #ff0000;
+    background-color: #C3423F;
+    padding: 10px;
+    border-radius: 20px;
+    display: none;
+    font-family: var(--Fonte-2);
+    font-style: normal;
+    font-weight: 700;
+    font-size:40px;
 }
- input{
-     font-family: var(--Fonte-2);
-     font-style: normal;
-     font-weight: 700;
-     font-size:30px;
-     padding-left: 110px;
-     width: 80%;
-     color: var(--Cor-Cinza);
+input{
+    font-family: var(--Fonte-2);
+    font-style: normal;
+    font-weight: 700;
+    font-size:30px;
+    padding-left: 110px;
+    width: 80%;
+    color: var(--Cor-Cinza);
 }
- .Formulario ::placeholder{
-     font-family: var(--Fonte-2);
-     font-style: normal;
-     font-weight: 700;
-     font-size:40px;
-     padding-left: 10px;
-     color: var(--Cor-Cinza);
+.Formulario ::placeholder{
+    font-family: var(--Fonte-2);
+    font-style: normal;
+    font-weight: 700;
+    font-size:40px;
+    padding-left: 10px;
+    color: var(--Cor-Cinza);
 }
- #Nome{
-     background-color: #3C3C3B33;
-     height: 100px;
-     border-radius: 100px;
-     margin: 20px 40px;
-     border: solid 3px #00000033;
-     background-image: url("../Assets/do-utilizador\ 1.png");
-     background-repeat: no-repeat;
-     background-position: 5% 50%;
+#Nome{
+    background-color: #3C3C3B33;
+    height: 100px;
+    border-radius: 100px;
+    margin: 20px 40px;
+    border: solid 3px #00000033;
+    background-image: url("../Assets/do-utilizador\ 1.png");
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
 }
- #Email{
-     background-color: #3C3C3B33;
-     height: 100px;
-     border-radius: 100px;
-     margin: 20px 40px;
-     border: solid 3px #00000033;
-     background-image: url("../Assets/Imagem\ -\ email.svg");
-     background-repeat: no-repeat;
-     background-position: 5% 50%;
+#Email{
+    background-color: #3C3C3B33;
+    height: 100px;
+    border-radius: 100px;
+    margin: 20px 40px;
+    border: solid 3px #00000033;
+    background-image: url("../Assets/Imagem\ -\ email.svg");
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
 }
- #CNPJ{
-     background-color: #3C3C3B33;
-     height: 100px;
-     border-radius: 75px;
-     margin: 20px 40px;
-     border: solid 3px #00000033;
-     background-image: url("../Assets/documentos-google\ 1.png");
-     background-repeat: no-repeat;
-     background-position: 5% 50%;
+#CNPJ{
+    background-color: #3C3C3B33;
+    height: 100px;
+    border-radius: 75px;
+    margin: 20px 40px;
+    border: solid 3px #00000033;
+    background-image: url("../Assets/documentos-google\ 1.png");
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
 }
-
 .Senha{
     display: flex;
     align-items: center;
@@ -231,83 +229,78 @@
     padding-right: 40px;
     font-size: 40px;
 }
-
 #Senha{
     background-color: transparent;
-    outline: none;    
-    border: none; 
+    outline: none;
+    border: none;
 }
-
- #Senha:focus, #Senha_Confirm:focus{
-        outline: none;    
-        border: none; 
-
+#Senha:focus, #Senha_Confirm:focus{
+    outline: none;
+    border: none;
 }
-
- #Senha_Confirm{
+#Senha_Confirm{
     background-color: transparent;
-    outline: none;    
-    border: none; 
+    outline: none;
+    border: none;
 }
-
- #Botao{
-     background-color: var(--Cor-Verde);
-     align-self: center;
-     padding: 22px 115px;
-     border-radius: 100px;
-     border: none;
-     font-family: var(--Fonte-2);
-     font-style: normal;
-     font-weight: 900;
-     font-size: 20px;
-     color: var(--Cor-Bege);
-     cursor: pointer;
+#Botao{
+    background-color: var(--Cor-Verde);
+    align-self: center;
+    padding: 22px 115px;
+    border-radius: 100px;
+    border: none;
+    font-family: var(--Fonte-2);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    color: var(--Cor-Bege);
+    cursor: pointer;
 }
- #Botao:hover{
-     background-color: var(--Cor-Vermelha);
+#Botao:hover{
+    background-color: var(--Cor-Vermelha);
 }
- #Botao:active{
-     background-color: #992624;
-     padding: 20px 113px;
-     margin: 2px 2px;
+#Botao:active{
+    background-color: #992624;
+    padding: 20px 113px;
+    margin: 2px 2px;
 }
 /*------------ Textos Direita ------------*/
- .Textos{
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
+.Textos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
- .Textos h1{
-     font-family: var(--Fonte-2);
-     font-style: normal;
-     font-weight: 900;
-     font-size: 64px;
-     line-height: 102px;
-     letter-spacing: 0.34em;
-     color: var(--Cor-Cinza);
+.Textos h1{
+    font-family: var(--Fonte-2);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 102px;
+    letter-spacing: 0.34em;
+    color: var(--Cor-Cinza);
 }
- .Textos img{
-     width: 40%;
+.Textos img{
+    width: 40%;
 }
- p{
-     font-family: var(--Fonte-1);
-     font-style: normal;
-     font-weight: 400;
-     font-size: 40px;
-     display: flex;
-     align-items: center;
-     text-align: justify;
-     color: var(--Cor-Cinza);
+p{
+    font-family: var(--Fonte-1);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    color: var(--Cor-Cinza);
 }
 /*-------------- Footer ---------------- */
- footer{
-     background-color: var(--Cor-Cinza);
-     height: 100px;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     padding: 0% 2%;
+footer{
+    background-color: var(--Cor-Cinza);
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0% 2%;
 }
 footer h3{
     font-family: var(--Fonte-1);
@@ -316,196 +309,191 @@ footer h3{
     font-size: 40px;
     line-height: 102px;
 }
- footer div{
-     display: flex;
-     align-items: center;
-     gap: 15px;
-     color: #b9b9b9;
+footer div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #b9b9b9;
 }
- .horario {
-     background-color: #3C3C3B;
-     color: white;
-     padding: 10px;
-     font-size: 24px;
+.horario {
+    background-color: #3C3C3B;
+    color: white;
+    padding: 10px;
+    font-size: 24px;
 }
- @media screen and (max-width: 500px){
-     .Menu{
-         padding-top: 2%;
-         margin-left: 5%;
-         margin-right: 2%;
-         height: auto;
-         display: flex;
-         justify-content: space-between;
-         align-items: initial;
-    }
-     .Menu a{
-         font-size: 20px;
-    }
-     .Menu_Esquerda_Simbulo{
-         width: 50px;
-    }
-     .Menu_Esquerda_Simbulo{
-         display: block;
-    }
-     .Menu_Esquerda_Fechado{
-         display: none;
-    }
-     .Menu_Esquerda_Aberto{
-         display: grid;
-         gap: 1%;
-         grid-template-columns: 73% 25% ;
-         justify-items: center;
-         justify-content: center;
-         align-items: center;
-    }
-     .Menu_Esquerda_Aberto ul{
-         display: none;
-         flex-direction: column;
-         align-items: center;
-         gap: 10px;
-    }
-     .Menu_Esquerda_Aberto img{
-         width: 70%;
-    }
-     .Menu_Esquerda_Aberto a{
-         font-size: 14px;
-    }
-     .Menu_Direita a{
-         font-size: 17px;
-    }
-
-     /* The switch - the box around the slider */
-     .switch {
+@media screen and (max-width: 500px){
+    .Menu{
+        padding-top: 2%;
+        margin-left: 5%;
+        margin-right: 2%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: initial;
+   }
+    .Menu a{
+        font-size: 20px;
+   }
+    .Menu_Esquerda_Simbulo{
+        width: 50px;
+   }
+    .Menu_Esquerda_Simbulo{
+        display: block;
+   }
+    .Menu_Esquerda_Fechado{
+        display: none;
+   }
+    .Menu_Esquerda_Aberto{
+        display: grid;
+        gap: 1%;
+        grid-template-columns: 73% 25% ;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+   }
+    .Menu_Esquerda_Aberto ul{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+   }
+    .Menu_Esquerda_Aberto img{
+        width: 70%;
+   }
+    .Menu_Esquerda_Aberto a{
+        font-size: 14px;
+   }
+    .Menu_Direita a{
+        font-size: 17px;
+   }
+   /* The switch - the box around the slider */
+    .switch {
         --width-of-switch: 1.8em;
    }
-
-    /* ---------Main----------- */
-     .Section_1{
-         display: flex;
-         flex-direction: column-reverse;
-         text-align: center;
-         padding-left: 5%;
-         padding-right: 5%;
-         padding-bottom: 15%;
-         gap: 50px;
-    }
-     .Section_1 h1{
-         font-size: 25px;
-         height: 100px;
-         align-items: center;
-         text-align: center;
-    }
-     .Section_1 p{
-         font-size: 15px;
-         line-height: 30px;
-         display: flex;
-         align-items: center;
-    }
-     .Section_1 img{
-         width: 40%;
-    }
-    /* Formulario */
-     .Formulario{
-         background-color: var(--Cor-Bege);
-         box-shadow: 0px 4px 34px 8px rgba(0, 0, 0, 0.25);
-         border-radius: 30px;
-         display: flex;
-         justify-content: center;
-         flex-direction: column;
-         padding-bottom: 30px;
-         padding-top: 30px;
-         align-items: center;
-         width: 100%;
-    }
-     #msgError{
-         width: 80%;
-         text-align: center;
-         color: #ff0000;
-         background-color: #C3423F;
-         padding: 10px;
-         border-radius: 20px;
-         display: none;
-         font-family: var(--Fonte-2);
-         font-style: normal;
-         font-weight: 700;
-         font-size:40px;
-    }
-     input{
-         font-family: var(--Fonte-2);
-         font-style: normal;
-         font-weight: 700;
-         font-size:20px;
-         padding-left: 50px;
-         color: var(--Cor-Cinza);
-    }
-     .Formulario ::placeholder{
-         font-family: var(--Fonte-2);
-         font-style: normal;
-         font-weight: 700;
-         font-size:20px;
-         padding-left: 10px;
-         color: var(--Cor-Cinza);
-    }
-     #Nome, #Email, #CNPJ{
-         background-color: #3C3C3B33;
-         height: 50px;
-         border: solid 3px #00000033;
-         background-size: 8%;
-    }
-
+   /* ---------Main----------- */
+    .Section_1{
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 15%;
+        gap: 50px;
+   }
+    .Section_1 h1{
+        font-size: 25px;
+        height: 100px;
+        align-items: center;
+        text-align: center;
+   }
+    .Section_1 p{
+        font-size: 15px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+   }
+    .Section_1 img{
+        width: 40%;
+   }
+   /* Formulario */
+    .Formulario{
+        background-color: var(--Cor-Bege);
+        box-shadow: 0px 4px 34px 8px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        align-items: center;
+        width: 100%;
+   }
+    #msgError{
+        width: 80%;
+        text-align: center;
+        color: #ff0000;
+        background-color: #C3423F;
+        padding: 10px;
+        border-radius: 20px;
+        display: none;
+        font-family: var(--Fonte-2);
+        font-style: normal;
+        font-weight: 700;
+        font-size:40px;
+   }
+    input{
+        font-family: var(--Fonte-2);
+        font-style: normal;
+        font-weight: 700;
+        font-size:20px;
+        padding-left: 50px;
+        color: var(--Cor-Cinza);
+   }
+    .Formulario ::placeholder{
+        font-family: var(--Fonte-2);
+        font-style: normal;
+        font-weight: 700;
+        font-size:20px;
+        padding-left: 10px;
+        color: var(--Cor-Cinza);
+   }
+    #Nome, #Email, #CNPJ{
+        background-color: #3C3C3B33;
+        height: 50px;
+        border: solid 3px #00000033;
+        background-size: 8%;
+   }
     #Senha, #Senha_Confirm{
         background-color: #3C3C3B33;
         height: 50px;
         border: solid 3px #00000033;
         background-size: 8%;
         background-color: transparent;
-        outline: none;    
-        border: none; 
-    }
-
+        outline: none;
+        border: none;
+   }
     .Senha, .Senha_Confirm{
         background-color: #3C3C3B33;
         height: 50px;
         border: solid 3px #00000033;
         background-size: 8%;
         width: 83%;
-    }
-
-     #Botao{
-         background-color: var(--Cor-Verde);
-         align-self: center;
-         padding: 12px 70px;
-         border-radius: 100px;
-         border: none;
-         font-family: var(--Fonte-2);
-         font-style: normal;
-         font-weight: 900;
-         font-size: 12px;
-         color: var(--Cor-Bege);
-         cursor: pointer;
-    }
-     #Botao:hover{
-         background-color: var(--Cor-Vermelha);
-    }
-     #Botao:active{
-         background-color: #992624;
-         padding: 10px 68px;
-         margin: 2px 2px;
-    }
-    /* Formulario Fim */
-     footer{
-         height: 30px;
-         padding: 0% 5%;
-    }
-     footer h3{
-         font-size: 10px;
-    }
-     footer img{
-         width: 20px;
-         height: 20px;
-    }
-     .horario{
-         font-size: 10px;
-         padding: 0px;
-    }
+   }
+    #Botao{
+        background-color: var(--Cor-Verde);
+        align-self: center;
+        padding: 12px 70px;
+        border-radius: 100px;
+        border: none;
+        font-family: var(--Fonte-2);
+        font-style: normal;
+        font-weight: 900;
+        font-size: 12px;
+        color: var(--Cor-Bege);
+        cursor: pointer;
+   }
+    #Botao:hover{
+        background-color: var(--Cor-Vermelha);
+   }
+    #Botao:active{
+        background-color: #992624;
+        padding: 10px 68px;
+        margin: 2px 2px;
+   }
+   /* Formulario Fim */
+    footer{
+        height: 30px;
+        padding: 0% 5%;
+   }
+    footer h3{
+        font-size: 10px;
+   }
+    footer img{
+        width: 20px;
+        height: 20px;
+   }
+    .horario{
+        font-size: 10px;
+        padding: 0px;
+   }
 }

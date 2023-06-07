@@ -5,27 +5,19 @@
     padding: 0;
     max-width: 100%;
 }
-
 :root{
-    
     --Cor-Bege: #F4EFE3;
     --Cor-Cinza: #3C3C3B;
     --Cor-Verde: #618985;
     --Cor-Vermelha: #C3423F;
     --Cor-Amarela: #FFCB77;
-
-
     --Fonte-1: 'Alegreya Sans SC';
     --Fonte-2: 'Baloo 2';
 }
-
 /*----------------- Header ------------------ */
-
-
 header{
     background-color: var(--Cor-Bege);
 }
-
 .Menu{
     margin-left: 5%;
     height: 150px;
@@ -34,27 +26,22 @@ header{
     grid-template-columns: 60% 30%;
     align-items: center;
 }
-
 #Ativo{
     color: var(--Cor-Vermelha);
 }
-
 .Menu_Esquerda_Simbulo{
     display: none;
-}   
-
+}
 .Menu_Esquerda_Fechado{
     display: flex;
     gap: 50px;
 }
-
 .Menu ul{
     display: flex;
     align-items: center;
     list-style: none;
     gap: 30px;
 }
-
 .Menu_Esquerda a{
     text-decoration: none;
     font-family: var(--Fonte-1);
@@ -63,18 +50,14 @@ header{
     font-size: 32px;
     line-height: 38px;
     letter-spacing: -0.045em;
-
     color: var(--Cor-Cinza);
 }
-
 .Menu_Esquerda_Aberto{
     display: none;
 }
-
 .Menu_Direita{
     justify-content: center;
 }
-
 .Menu_Direita a{
     text-decoration: none;
     font-family: var(--Fonte-1);
@@ -83,34 +66,30 @@ header{
     font-size: 40px;
     line-height: 48px;
     letter-spacing: -0.045em;
-
     color: var(--Cor-Verde);
 }
-
 /* Botao darkmode */
 /* The switch - the box around the slider */
 .switch {
     display: block;
     --width-of-switch: 3.5em;
     --height-of-switch: 2em;
-    /* size of sliding icon -- sun and moon */
+   /* size of sliding icon -- sun and moon */
     --size-of-icon: 1.4em;
-    /* it is like a inline-padding of switch */
+   /* it is like a inline-padding of switch */
     --slider-offset: 0.3em;
     position: relative;
     width: var(--width-of-switch);
     height: var(--height-of-switch);
-  }
-  
-  /* Hide default HTML checkbox */
-  .switch input {
+}
+/* Hide default HTML checkbox */
+.switch input {
     opacity: 0;
     width: 0;
     height: 0;
-  }
-  
-  /* The slider */
-  .slider {
+}
+/* The slider */
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -120,9 +99,8 @@ header{
     background-color: #f4f4f5;
     transition: .4s;
     border-radius: 30px;
-  }
-  
-  .slider:before {
+}
+.slider:before {
     position: absolute;
     content: "";
     height: var(--size-of-icon,1.4em);
@@ -133,24 +111,19 @@ header{
     transform: translateY(-50%);
     background: linear-gradient(40deg,#C3423F,#FFCB77 70%);
     ;
-   transition: .4s;
-  }
-  
-  input:checked + .slider {
+    transition: .4s;
+}
+input:checked + .slider {
     background-color: #303136;
-  }
-  
-  input:checked + .slider:before {
+}
+input:checked + .slider:before {
     left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
     background: #303136;
-    /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+   /* change the value of second inset in box-shadow to change the angle and direction of the moon */
     box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
-  }
+}
 /* Botao darkmode */
-
 /* -------Main------- */
-
-
 .Section_1{
     background-color: var(--Cor-Bege);
     padding-left: 5%;
@@ -161,22 +134,19 @@ header{
     gap: 10%;
     grid-template-columns: 45% 45%;
 }
-
-/*------------ Imagem da direita  ------------*/
+/*------------ Imagem da direita ------------*/
 .Anuncio{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
 /*------------ Textos Esquerda ------------*/
 .Textos{
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
-
 .Dados{
     box-shadow: 0px 4px 43px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
@@ -187,46 +157,34 @@ header{
     align-items: center;
     padding-bottom: 50px;
 }
-
 .Dados_Var{
     width: 90%;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-
-
 .Textos h1{
     font-family: var(--Fonte-2);
     font-style: normal;
     font-weight: 900;
     font-size: 64px;
-
     display: flex;
     align-items: flex-end;
     letter-spacing: 0.15em;
-
     justify-content: center;
-
-
     color: var(--Cor-Cinza);
 }
-
-
 .Dados h1{
     font-family: var(--Fonte-2);
     font-style: normal;
     font-weight: 900;
     font-size: 50px;
     line-height: 102px;
-
     display: flex;
     align-items: flex-end;
     letter-spacing: 0.10em;
-
     color:var(--Cor-Vermelha);
 }
-
 .Dados h2{
     font-family: var(--Fonte-2);
     font-style: normal;
@@ -238,10 +196,8 @@ header{
     align-items: flex-end;
     letter-spacing: 0.05em;
     align-items: center;
-
     color: var(--Cor-Cinza);
 }
-
 .Nome{
     background-color: #3C3C3B33;
     height: 120px;
@@ -252,7 +208,6 @@ header{
     background-repeat: no-repeat;
     background-position: 5% 50%;
 }
-
 .CNPJ{
     background-color: #3C3C3B33;
     height: 120px;
@@ -263,7 +218,6 @@ header{
     background-repeat: no-repeat;
     background-position: 5% 50%;
 }
-
 .Email{
     background-color: #3C3C3B33;
     height: 120px;
@@ -274,7 +228,6 @@ header{
     background-repeat: no-repeat;
     background-position: 5% 50%;
 }
-
 .Textos p{
     font-family: var(--Fonte-1);
     font-style: normal;
@@ -283,13 +236,9 @@ header{
     display: flex;
     align-items: center;
     text-align: justify;
-
     color: var(--Cor-Cinza);
-
 }
-
 /*------------ divisao de pagina ------------*/
-
 .custom-shape-divider-top-1685362347 {
     position: relative;
     top: 0;
@@ -298,7 +247,6 @@ header{
     overflow: hidden;
     line-height: 0;
 }
-
 .custom-shape-divider-top-1685362347 svg {
     position: relative;
     display: block;
@@ -307,13 +255,10 @@ header{
     transform: rotateY(180deg);
     background-color: var(--Cor-Amarela);
 }
-
 .custom-shape-divider-top-1685362347 .shape-fill {
     fill: var(--Cor-Bege);
 }
-
-
-/*-------------- section 2  ---------------- */
+/*-------------- section 2 ---------------- */
 .Section_2{
     background-color: var(--Cor-Amarela);
     padding-left: 3%;
@@ -324,13 +269,11 @@ header{
     padding-bottom: 3%;
     gap: 2rem;
 }
-
 .Section_2 .Cards{
     display: grid;
     grid-template-columns: 30% 65%;
     justify-content: space-between;
 }
-
 .Anuncio_Card{
     background-color: #c3413f2e;
     border-radius: 35px;
@@ -342,15 +285,12 @@ header{
     padding: 50px;
     text-align: center;
 }
-
 .Anuncio_Card strong{
     color: var(--Cor-Vermelha);
 }
-
 .Anuncio_Card img{
     width: 60%;
 }
-
 .Section_2 h2{
     margin-top: 10px;
     font-family: var(--Fonte-2);
@@ -358,12 +298,9 @@ header{
     font-weight: 800;
     font-size: 34px;
     letter-spacing: 0.105em;
-
-
     color: #3C3C3B;
     transition: 200ms;
 }
-
 .Section_2 p{
     font-family: var(--Fonte-2);
     font-style: normal;
@@ -373,20 +310,15 @@ header{
     align-items: center;
     text-align: center;
     justify-content: center;
-
     color: #3C3C3B;
-
 }
-
 .Section_2 .Textos h1{
     justify-content: center;
     align-items: center;
     color: #3C3C3B;
 }
-
-/*-------------- Footer  ---------------- */
+/*-------------- Footer ---------------- */
 footer{
-    
     background-color: var(--Cor-Cinza);
     height: 100px;
     display: flex;
@@ -401,25 +333,20 @@ footer h3{
     font-size: 40px;
     line-height: 102px;
 }
-
 footer div{
     display: flex;
     align-items: center;
     gap: 15px;
     color: #b9b9b9;
 }
-
 .horario {
     background-color: #3C3C3B;
     color: white;
     padding: 10px;
     font-size: 24px;
 }
-
 /* Midias queries */
-
-@media screen  and (max-width: 500px){
-    
+@media screen and (max-width: 500px){
     .Menu{
         padding-top: 2%;
         margin-left: 5%;
@@ -428,23 +355,19 @@ footer div{
         display: flex;
         justify-content: space-between;
         align-items: initial;
-    }
-
+   }
     .Menu a{
         font-size: 20px;
-    }
-
+   }
     .Menu_Esquerda_Simbulo{
         width: 50px;
-    }
+   }
     .Menu_Esquerda_Simbulo{
         display: block;
-    }
-
+   }
     .Menu_Esquerda_Fechado{
         display: none;
-    }
-
+   }
     .Menu_Esquerda_Aberto{
         display: grid;
         gap: 1%;
@@ -452,37 +375,27 @@ footer div{
         justify-items: center;
         justify-content: center;
         align-items: center;
-    }
-
+   }
     .Menu_Esquerda_Aberto ul{
         display: none;
         flex-direction: column;
         align-items: center;
         gap: 10px;
-    }
-
+   }
     .Menu_Esquerda_Aberto img{
         width: 70%;
-    }
-
+   }
     .Menu_Esquerda_Aberto a{
         font-size: 14px;
-    }
-
-
+   }
     .Menu_Direita a{
         font-size: 17px;
-    }
-
-     /* The switch - the box around the slider */
-     .switch {
+   }
+   /* The switch - the box around the slider */
+    .switch {
         --width-of-switch: 1.8em;
    }
-
-
-
-    /* ---------Main----------- */
-
+   /* ---------Main----------- */
     .Section_1{
         display: flex;
         flex-direction: column;
@@ -490,128 +403,101 @@ footer div{
         padding-right: 5%;
         padding-bottom: 2%;
         gap: 5%;
-
-    }
-
+   }
     .Dados h2{
         font-size: 15px;
         padding-left: 50px;
         text-align: center;
         align-items: center;
-    }
-
+   }
     .Dados h1{
         font-size: 30px;
         line-height: 50px;
         text-align: center;
         align-items: center;
         margin-top: 40px;
-    }
-
-
-    
+   }
     .Email, .CNPJ, .Nome{
         height: 50px;
         background-size: 8%;
-    }
-    
-
+   }
     .Section_1 h1{
         font-size: 30px;
         height: 50px;
         align-items: center;
-
-    }
-
+   }
     .Section_1 h3{
         font-size: 20px;
         height: 20px;
         align-items: center;
-    }
-
+   }
     .Section_1 p{
         font-size: 15px;
-    }
-
+   }
     .Section_1 h4{
         font-size: 10px;
         height: 20px;
         align-items: center;
-    }
-
+   }
     .Anuncio{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         margin-top: 10%;
-    }
-
+   }
     .Anuncio img{
         width: 50%;
-    }
-    
+   }
     .Anuncio h2{
         font-size: 15px;
         padding: 10px 90px;
-    }
-    
+   }
     .Anuncio h2:hover{
         padding: 12px 92px;
-    }
-
+   }
     .Section_2 h1{
         font-size: 13px;
         height: 50px;
         justify-content: center;
         align-items: center;
-    }
-
+   }
     .Section_2{
         justify-content: center;
         align-items: center;
-    }
-
+   }
     .Anuncio_Card{
         padding: 10px;
-    }
-
+   }
     .Section_2 h2{
         font-size: 17px;
         justify-content: center;
         align-items: center;
-    }
-
+   }
     .Section_2 p{
         font-size: 30px;
         justify-content: center;
         align-items: center;
-    }
-
+   }
     .Section_2 .Cards{
         display: flex;
         flex-direction: column;
         gap: 50px;
         width: 60vw;
-    }
-
-
+   }
     footer{
         height: 30px;
         padding: 0% 5%;
-    }
-
+   }
     footer h3{
         font-size: 10px;
-    }
-
+   }
     footer img{
         width: 20px;
         height: 20px;
-
-    }
+   }
     .horario{
         font-size: 10px;
         padding: 0px;
-    }
+   }
 }
