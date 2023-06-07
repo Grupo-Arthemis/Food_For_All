@@ -5,6 +5,15 @@
      padding: 0;
      max-width: 100%;
 }
+
+.fa-eye{
+    /* position: absolute; */
+    top: 15px;
+    right: 10px;
+    cursor: pointer;
+    color: #739578;
+  }
+
  :root{
      --Cor-Bege: #F4EFE3;
      --Cor-Cinza: #3C3C3B;

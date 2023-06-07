@@ -35,6 +35,38 @@ function limparCampos() {
     confirma.value = '';
 };
 
+// Ver e desver a senha
+
+const SenhaVer = document.querySelector(".eye");
+const SenhaVerC = document.querySelector(".eyec");
+
+SenhaVerC.addEventListener("click", ()=>{
+    const inputPassC = document.querySelector("#Senha_Confirm");
+
+    if(inputPassC.getAttribute("type") == "password"){
+        inputPassC.setAttribute("type","text");
+        SenhaVerC.setAttribute("class","fa fa-eye eye");
+    }else{
+        inputPassC.setAttribute("type","password");
+        SenhaVerC.setAttribute("class","fa fa-eye-slash eye");
+    }
+
+});
+
+SenhaVer.addEventListener("click", ()=>{
+    const inputPass = document.querySelector("#Senha");
+
+    if(inputPass.getAttribute("type") == "password"){
+        inputPass.setAttribute("type","text");
+        SenhaVer.setAttribute("class","fa fa-eye eye");
+    }else{
+        inputPass.setAttribute("type","password");
+        SenhaVer.setAttribute("class","fa fa-eye-slash eye");
+    }
+
+});
+
+
 // verificar se os campos estao vazios, ver se o email é realmente um email, ver se o nome, e email tem mais de 5 digitos
 // ver se a senha tem entre 6 e 8 digitos, verificar se a senha esta igual na confirmacao
 // e por ultimo limpar os campos se tudo for feito corretamente

@@ -84,3 +84,21 @@ function formatarNumero(numero) {
 
 // Atualizar a hora atual a cada segundo
 setInterval(exibirHoraAtual, 1000);
+
+
+// Ver e desver a senha
+
+const SenhaVer = document.querySelector(".eye");
+
+SenhaVer.addEventListener("click", ()=>{
+    const inputPass = document.querySelector("#Senha");
+
+    if(inputPass.getAttribute("type") == "password"){
+        inputPass.setAttribute("type","text");
+        SenhaVer.setAttribute("class","fa fa-eye eye");
+    }else{
+        inputPass.setAttribute("type","password");
+        SenhaVer.setAttribute("class","fa fa-eye-slash eye");
+    }
+
+});
