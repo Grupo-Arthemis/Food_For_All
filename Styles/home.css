@@ -166,7 +166,7 @@
 }
  .Anuncio h2:hover{
      background-color: var(--Cor-Vermelha);
-     padding: 20px 59px;
+     /* padding: 20px 59px; */
      transition: 200ms;
 }
 /*------------ Textos Esquerda ------------*/
