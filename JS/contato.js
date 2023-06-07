@@ -92,9 +92,7 @@ initMap(latitude, longitude);
 enviarCep.addEventListener("click", function() {
     const cep = cepe.value;
     if (cep.length > 1) {
-        console.log(cep);
         CEP(cep).then((result) => {
-            console.log(result);
             const { latitude, longitude } = result;
             if (mapa) {
                 changeMapView(latitude, longitude);

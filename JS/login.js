@@ -20,7 +20,6 @@ const botao = document.querySelector("#Botao");
 console.log(botao)
 
 // Validacao de Login
-
 document.addEventListener("keypress", function(event) {
     let listaUser = JSON.parse(localStorage.getItem("listaUser"));
     const msgError = document.querySelector("#msgError");
@@ -83,7 +82,7 @@ botao.addEventListener("click", ()=>{
                 localStorage.setItem("usuario-validado", JSON.stringify(usuarioValidado))
 
                 msgError.setAttribute("style","color:#F4EFE3;background-color:#618985;display:block;")
-                msgError.innerHTML = "<strong>Usuário validado!</strong>"
+                msgError.innerHTML = "<strong>Bem vindo!</strong>"
 
                 setTimeout(function () {
                     window.location.href = "../index.html";
@@ -98,7 +97,6 @@ botao.addEventListener("click", ()=>{
 );
 
 // Função para data e hora no rodapé
-
 function exibirHoraAtual() {
     var campoHora = document.getElementById("horaAtual");
     var campoData = document.getElementById("dataAtual");
@@ -120,12 +118,7 @@ function formatarNumero(numero) {
     return numero < 10 ? "0" + numero : numero;
 }
 
-// Atualizar a hora atual a cada segundo
-setInterval(exibirHoraAtual, 1000);
-
-
 // Ver e desver a senha
-
 const SenhaVer = document.querySelector(".eye");
 
 SenhaVer.addEventListener("click", ()=>{

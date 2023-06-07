@@ -1,15 +1,16 @@
 // Função para o darkmode
 var darkModeInd = JSON.parse(localStorage.getItem("darkModeInd"));
+
 if (darkModeInd == null) {
     console.log("Darkmode setada para false");
     window.alert("Seja bem vindo ao Food For All!");
-    let darkModeInd = false
+    let darkModeInd = false;
     localStorage.setItem("darkModeInd", JSON.stringify(darkModeInd));
-}else if(darkModeInd == true){
+} else if (darkModeInd == true) {
     console.log("Darkmode setada para true");
     darkModeTrue();
     document.querySelector('#darkModeButton').checked = true;
-}else{
+} else {
     console.log("Darkmode setada para false");
     darkModeFalse();
     document.querySelector('#darkModeButton').checked = false;
@@ -19,24 +20,24 @@ function darkModeTrue() {
     var root = document.documentElement;
     var LogoFechado = document.querySelector('.Menu_Esquerda_Fechado .Menu_Esquerda_Logo');
     var LogoAberto = document.querySelector('.Menu_Esquerda_Aberto .Menu_Esquerda_Logo');
-    
+
     console.log('Darkmode ativado');
     root.style.setProperty("--Cor-Bege", "#3C3C3B");
     root.style.setProperty("--Cor-Cinza", "#F4EFE3");
     document.querySelector('footer').style.backgroundColor = '#3C3C3B';
     document.querySelector('body').style.backgroundColor = '#3C3C3B';
-    let darkModeInd = true
+    let darkModeInd = true;
     localStorage.setItem("darkModeInd", JSON.stringify(darkModeInd));
     if (document.querySelector('title').innerHTML == 'Home') {
         LogoFechado.setAttribute('src', './Assets/LogoDarkMode.png');
         LogoAberto.setAttribute('src', './Assets/LogoDarkMode.png');
-    }else{
+    } else {
         LogoFechado.setAttribute('src', '../Assets/LogoDarkMode.png');
         LogoAberto.setAttribute('src', '../Assets/LogoDarkMode.png');
     };
 };
 
-function darkModeFalse(){
+function darkModeFalse() {
     var root = document.documentElement;
     var LogoFechado = document.querySelector('.Menu_Esquerda_Fechado .Menu_Esquerda_Logo');
     var LogoAberto = document.querySelector('.Menu_Esquerda_Aberto .Menu_Esquerda_Logo');
@@ -45,12 +46,12 @@ function darkModeFalse(){
     root.style.setProperty("--Cor-Bege", "#F4EFE3");
     root.style.setProperty("--Cor-Cinza", "#3C3C3B");
     document.querySelector('body').style.backgroundColor = '#F4EFE3';
-    let darkModeInd = false
+    let darkModeInd = false;
     localStorage.setItem("darkModeInd", JSON.stringify(darkModeInd));
     if (document.querySelector('title').innerHTML == 'Home') {
         LogoFechado.setAttribute('src', './Assets/Logo.png');
         LogoAberto.setAttribute('src', './Assets/Logo.png');
-    }else{
+    } else {
         LogoFechado.setAttribute('src', '../Assets/Logo.png');
         LogoAberto.setAttribute('src', '../Assets/Logo.png');
     };
@@ -60,28 +61,25 @@ const DarkMode = document.getElementById('darkModeButton');
 DarkMode.addEventListener('click', () => {
     if (DarkMode.checked == true) {
         darkModeTrue();
-    }else{
+    } else {
         darkModeFalse();
     }
 });
 
 // Função para o menu lateral
-
 const Abrirlista = document.querySelector('.Menu_Esquerda_Aberto .Menu_Esquerda_Simbulo');
 Abrirlista.addEventListener('click', () => {
     console.log('Clicou');
     if (document.querySelector('.Menu_Esquerda_Aberto ul').style.display != 'flex') {
         document.querySelector('.Menu_Esquerda_Aberto ul').style.display = 'flex';
         return;
-    }else{
+    } else {
         document.querySelector('.Menu_Esquerda_Aberto ul').style.display = 'none';
         return;
     }
 });
 
-
 // Função para data e hora no rodapé
-
 function exibirHoraAtual() {
     var campoHora = document.getElementById("horaAtual");
     var campoData = document.getElementById("dataAtual");
@@ -106,12 +104,11 @@ function formatarNumero(numero) {
 // Atualizar a hora atual a cada segundo
 setInterval(exibirHoraAtual, 1000);
 
-
-// Função para detectar usuario logado
-
+// Função para detectar usuário logado e apresentar dados do usuario Logado
 var usuarioLogado = JSON.parse(localStorage.getItem("usuario-validado"));
+
 if (usuarioLogado != null) {
-    console.log("Usuario logado");  
+    console.log("Usuário logado");
     console.log(usuarioLogado);
     var usuarioLogadoNome = usuarioLogado.nomeCompleto;
     var menuDireita1 = document.querySelectorAll('.Menu_Direita a');
@@ -119,10 +116,9 @@ if (usuarioLogado != null) {
 
     menuDireita2[0].setAttribute('href', '#');
 
-
     if (document.querySelector('title').innerHTML == 'Home') {
         menuDireita2[0].innerHTML = ('<img src="./Assets/logout.png" alt="" width=30px></img>');
-    }else{
+    } else {
         menuDireita2[0].innerHTML = ('<img src="../Assets/logout.png" alt="" width=30px></img>');
     };
 
@@ -131,9 +127,9 @@ if (usuarioLogado != null) {
 
     if (document.querySelector('title').innerHTML == 'Perfil') {
         var novoElemento = '<li><a href="./perfil.html" id="Ativo">Perfil</a></li>';
-    }else if(document.querySelector('title').innerHTML == 'Home') {
+    } else if (document.querySelector('title').innerHTML == 'Home') {
         var novoElemento = '<li><a href="./Pages/perfil.html">Perfil</a></li>';
-    }else{
+    } else {
         var novoElemento = '<li><a href="./perfil.html">Perfil</a></li>';
     };
 
@@ -144,16 +140,15 @@ if (usuarioLogado != null) {
     menuEsquerda.forEach(element => {
         console.log(element.innerHTML);
     });
+
     document.querySelector('.Menu_Direita li img').addEventListener('click', () => {
         console.log('Clicou');
-        var confirmacao = confirm("Deseja mesmo sair? ");
+        var confirmacao = confirm("Deseja mesmo sair?");
+
         if (confirmacao) {
             usuarioLogado = null;
             localStorage.setItem("usuario-validado", JSON.stringify(usuarioLogado));
             window.location.reload();
-            // return false;
         }
     });
 };
-
-

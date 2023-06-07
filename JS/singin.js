@@ -36,7 +36,6 @@ function limparCampos() {
 };
 
 // Ver e desver a senha
-
 const SenhaVer = document.querySelector(".eye");
 const SenhaVerC = document.querySelector(".eyec");
 
